@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invite a supervisor · Student · RPMS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER START -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="dashboard.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Research Project Management System</span>
+      </a>
+      <span class="period-tag">Research period 2026/2027</span>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle__label"><span class="nav-toggle__icon" aria-hidden="true"></span>Menu</label>
+      <div class="nav-panel">
+        <nav class="main-nav" aria-label="Student">
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="project.html">My project</a></li>
+            <li><a href="invite-supervisor.html" aria-current="page">Supervisor</a></li>
+            <li><a href="deadlines.html">Deadlines</a></li>
+            <li><a href="proposal.html">Proposal</a></li>
+            <li><a href="progress-reports.html">Progress reports</a></li>
+            <li><a href="final-report.html">Final report</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-menu__who">
+            <span class="user-menu__name">Nimali Perera</span>
+            <span class="user-menu__role">Student</span>
+          </div>
+          <div class="user-menu__links">
+            <a href="../shared/change-password.html">Change password</a>
+            <a class="user-menu__logout" href="../login.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <main id="main" class="page">
+    <div class="page-head">
+      <div class="page-head__text">
+        <p class="eyebrow">Supervisor invitation</p>
+        <h1>Invite a supervisor</h1>
+        <p class="lede">Choose the staff member you have already agreed your topic with. They will see your project details and can accept or reject the invitation.</p>
+      </div>
+    </div>
+
+    <div class="alert alert--info" role="note">
+      <div class="alert__body">
+        <span class="alert__title">Only one pending invitation at a time</span>
+        <p>You can't cancel a pending invitation. Wait for the supervisor to accept or reject it. If they reject it, your project returns to Draft and you can invite someone else.</p>
+      </div>
+    </div>
+
+    <!-- ===================== STATE A: DRAFT (can send) ===================== -->
+    <div class="mock-state" role="note">
+      <span class="mock-state__tag">Mock-up state</span>
+      DRAFT: no pending invitation, so the form is enabled.
+    </div>
+
+    <div class="layout-detail">
+      <section class="card" aria-labelledby="staff-heading">
+        <div class="card__head">
+          <h2 id="staff-heading">Registered academic staff</h2>
+          <span class="meta">3 active staff members</span>
+        </div>
+
+        <form class="search-bar" method="get" action="#" role="search" aria-label="Search staff">
+          <div class="field field--grow">
+            <label for="q">Search by name or research area</label>
+            <input class="input" type="search" id="q" name="q" placeholder="e.g. machine learning">
+          </div>
+          <div class="field">
+            <label for="department">Department</label>
+            <select class="select" id="department" name="department">
+              <option value="">All departments</option>
+              <option>Computer Science</option>
+              <option>Information Systems</option>
+              <option>Computer Engineering</option>
+            </select>
+          </div>
+          <button class="btn btn--secondary" type="submit">Search</button>
+        </form>
+
+        <form class="form-grid mt-5" method="post" action="#">
+          <input type="hidden" name="csrf_token" value="">
+          <input type="hidden" name="project_id" value="104">
+
+          <fieldset class="choice-group">
+            <legend>Select a supervisor <span class="req" aria-hidden="true">*</span></legend>
+            <div class="option-cards">
+              <label class="option-card">
+                <input type="radio" name="supervisor_id" value="11" required checked>
+                <span class="option-card__body">
+                  <span class="option-card__title">Dr. Ruwan Jayasinghe</span>
+                  <span class="meta">Department of Computer Science</span>
+                  <ul class="tag-list" aria-label="Research areas">
+                    <li>Machine learning</li><li>Natural language processing</li><li>Computer vision</li>
+                  </ul>
+                </span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="supervisor_id" value="12">
+                <span class="option-card__body">
+                  <span class="option-card__title">Dr. Shalini Wickramasinghe</span>
+                  <span class="meta">Department of Information Systems</span>
+                  <ul class="tag-list" aria-label="Research areas">
+                    <li>Human–computer interaction</li><li>Educational data mining</li><li>E-learning</li>
+                  </ul>
+                </span>
+              </label>
+              <label class="option-card">
+                <input type="radio" name="supervisor_id" value="13">
+                <span class="option-card__body">
+                  <span class="option-card__title">Prof. Anura Gunasekara</span>
+                  <span class="meta">Department of Computer Engineering</span>
+                  <ul class="tag-list" aria-label="Research areas">
+                    <li>Internet of Things</li><li>Embedded systems</li><li>Computer networks</li>
+                  </ul>
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="message">Message to the supervisor (optional)</label>
+            <textarea class="textarea" id="message" name="message" maxlength="1000" placeholder="Remind them of your discussion, e.g. when you met and what you agreed.">Dear Dr. Jayasinghe, thank you for meeting me on 28 October to discuss Sinhala news summarisation. As agreed, I am sending this invitation.</textarea>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit">Send invitation</button>
+            <a class="btn btn--secondary" href="project.html">Back to project</a>
+            <p class="form-note">Your project status will change to <span class="badge badge--neutral">Awaiting supervisor</span></p>
+          </div>
+        </form>
+      </section>
+
+      <aside class="stack" aria-label="Your project">
+        <section class="card card--muted" aria-labelledby="your-project-heading">
+          <h2 id="your-project-heading">Project being sent</h2>
+          <p class="strong mb-0">Abstractive Summarisation of Sinhala News Articles Using Transformer Models</p>
+          <p class="meta">Natural Language Processing</p>
+          <a class="small" href="project.html">Edit details</a>
+        </section>
+      </aside>
+    </div>
+
+    <!-- ============ STATE B: AWAITING_SUPERVISOR (one pending, disabled) ============ -->
+    <div class="mock-state" role="note">
+      <span class="mock-state__tag">Mock-up state</span>
+      AWAITING_SUPERVISOR: an invitation is pending, so sending is disabled.
+    </div>
+
+    <section class="card" aria-labelledby="pending-heading">
+      <h2 id="pending-heading" class="visually-hidden">Invitation pending</h2>
+      <div class="alert alert--warn" role="status">
+        <div class="alert__body">
+          <span class="alert__title">Invitation pending: Dr. Ruwan Jayasinghe</span>
+          <p>Sent on <time datetime="2026-10-30">30 Oct 2026</time>. You can send another invitation only if this one is rejected.</p>
+        </div>
+      </div>
+
+      <form class="form-grid mt-4" method="post" action="#">
+        <input type="hidden" name="csrf_token" value="">
+        <fieldset class="choice-group" disabled>
+          <legend>Select a supervisor</legend>
+          <div class="option-cards">
+            <label class="option-card"><input type="radio" name="supervisor_id" value="11" checked><span class="option-card__body"><span class="option-card__title">Dr. Ruwan Jayasinghe</span><span class="meta">Invitation pending</span></span></label>
+            <label class="option-card"><input type="radio" name="supervisor_id" value="12"><span class="option-card__body"><span class="option-card__title">Dr. Shalini Wickramasinghe</span></span></label>
+            <label class="option-card"><input type="radio" name="supervisor_id" value="13"><span class="option-card__body"><span class="option-card__title">Prof. Anura Gunasekara</span></span></label>
+          </div>
+        </fieldset>
+        <div class="form-actions">
+          <button class="btn btn--primary" type="submit" disabled aria-describedby="pending-reason">Send invitation</button>
+          <p class="form-note" id="pending-reason">Disabled: only one pending invitation is allowed at a time.</p>
+        </div>
+      </form>
+    </section>
+
+    <!-- ============ STATE C: SUPERVISOR_ASSIGNED and later (Nimali's current state) ============ -->
+    <div class="mock-state" role="note">
+      <span class="mock-state__tag">Mock-up state</span>
+      SUPERVISOR_ASSIGNED and later: invitations are closed. This is Nimali's current state.
+    </div>
+
+    <div class="alert alert--success" role="status">
+      <div class="alert__body">
+        <span class="alert__title">Your supervisor is Dr. Ruwan Jayasinghe</span>
+        <p>Accepted on <time datetime="2026-11-02">2 Nov 2026</time>. You can't send new invitations or change your supervisor. If a change is really needed, contact the coordinator. You, your supervisor and the coordinator must all agree.</p>
+      </div>
+    </div>
+
+    <!-- ===================== Invitation history (all states) ===================== -->
+    <section class="section-gap" aria-labelledby="history-heading">
+      <h2 id="history-heading" class="mt-5">Invitation history</h2>
+      <div class="table-wrap">
+        <table class="table table--wide">
+          <thead>
+            <tr>
+              <th scope="col">Supervisor</th>
+              <th scope="col">Sent</th>
+              <th scope="col">Status</th>
+              <th scope="col">Responded</th>
+              <th scope="col">Response comment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Dr. Ruwan Jayasinghe<span class="cell-sub">Computer Science</span></th>
+              <td class="nowrap"><time datetime="2026-10-30">30 Oct 2026</time></td>
+              <td><span class="badge badge--success">Accepted</span></td>
+              <td class="nowrap"><time datetime="2026-11-02">2 Nov 2026</time></td>
+              <td>“Happy to supervise this. Let's meet on Thursday to plan the proposal.”</td>
+            </tr>
+            <tr>
+              <th scope="row">Prof. Anura Gunasekara<span class="cell-sub">Computer Engineering</span></th>
+              <td class="nowrap"><time datetime="2026-10-27">27 Oct 2026</time></td>
+              <td><span class="badge badge--danger">Rejected</span></td>
+              <td class="nowrap"><time datetime="2026-10-29">29 Oct 2026</time></td>
+              <td>“This topic is outside my area. Dr. Jayasinghe works on Sinhala NLP and would be a better fit.”</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

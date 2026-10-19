@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Progress reports · Student · RPMS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER START -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="dashboard.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Research Project Management System</span>
+      </a>
+      <span class="period-tag">Research period 2026/2027</span>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle__label"><span class="nav-toggle__icon" aria-hidden="true"></span>Menu</label>
+      <div class="nav-panel">
+        <nav class="main-nav" aria-label="Student">
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="project.html">My project</a></li>
+            <li><a href="invite-supervisor.html">Supervisor</a></li>
+            <li><a href="deadlines.html">Deadlines</a></li>
+            <li><a href="proposal.html">Proposal</a></li>
+            <li><a href="progress-reports.html" aria-current="page">Progress reports</a></li>
+            <li><a href="final-report.html">Final report</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-menu__who">
+            <span class="user-menu__name">Nimali Perera</span>
+            <span class="user-menu__role">Student</span>
+          </div>
+          <div class="user-menu__links">
+            <a href="../shared/change-password.html">Change password</a>
+            <a class="user-menu__logout" href="../login.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <main id="main" class="page">
+    <div class="page-head">
+      <div class="page-head__text">
+        <p class="eyebrow">Progress</p>
+        <h1>Submit a progress report</h1>
+        <p class="lede">Tell your supervisor what you finished, what is blocking you and what comes next. You can send a report whenever you have news, as well as by each programme deadline.</p>
+      </div>
+    </div>
+
+    <div class="deadline-banner" role="note">
+      <span class="deadline-banner__label">Next deadline</span>
+      <span>Progress report 2</span>
+      <span class="deadline-banner__date"><time datetime="2027-03-26T23:59">Fri 26 Mar 2027</time></span>
+      <span class="badge badge--soft">Soft</span>
+      <span class="badge badge--success">Submitted on time</span>
+      <span class="deadline-banner__remaining">18 days left</span>
+    </div>
+
+    <div class="layout-detail">
+      <section class="card" aria-labelledby="form-heading">
+        <div class="card__head">
+          <h2 id="form-heading">New report (#3)</h2>
+        </div>
+
+        <form class="form-grid" method="post" action="#">
+          <input type="hidden" name="csrf_token" value="">
+          <input type="hidden" name="project_id" value="104">
+
+          <div class="field">
+            <label for="milestone_id">Related milestone (optional)</label>
+            <select class="select" id="milestone_id" name="milestone_id">
+              <option value="">No specific milestone</option>
+              <option value="3" selected>Data collection and implementation (due 5 Mar 2027, overdue)</option>
+              <option value="4">Evaluation (due 23 Apr 2027)</option>
+              <option value="5">Draft final report (due 14 May 2027)</option>
+            </select>
+            <p class="hint">Only milestones that are not yet completed are listed.</p>
+          </div>
+
+          <div class="field">
+            <label for="work_completed">Work completed this period <span class="req" aria-hidden="true">*</span></label>
+            <textarea class="textarea textarea--tall" id="work_completed" name="work_completed" required placeholder="Describe what you completed since your last report"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="challenges">Challenges / blockers</label>
+            <textarea class="textarea" id="challenges" name="challenges" placeholder="Any problems where you need help"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="next_steps">Planned next steps <span class="req" aria-hidden="true">*</span></label>
+            <textarea class="textarea" id="next_steps" name="next_steps" required placeholder="What you plan to do before the next report"></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit">Submit update</button>
+            <a class="btn btn--secondary" href="dashboard.html">Cancel</a>
+            <p class="form-note"><span class="req" aria-hidden="true">*</span> required</p>
+          </div>
+        </form>
+      </section>
+
+      <aside class="stack" aria-label="Previous reports">
+        <section class="card" aria-labelledby="previous-heading">
+          <h2 id="previous-heading">Previous reports</h2>
+          <ul class="item-list">
+            <li>
+              <div class="item-row">
+                <span class="item-title">Report #2 · <time datetime="2027-03-04">4 Mar 2027</time></span>
+                <span class="badge badge--neutral">Not reviewed</span>
+              </div>
+              <div class="meta">Data collection and implementation · No feedback yet</div>
+              <details class="disclosure disclosure--plain">
+                <summary>Show report</summary>
+                <div class="disclosure__body">
+                  <p><strong>Work completed:</strong> Collected 4,120 article–summary pairs from three news sites; cleaned and de-duplicated them.</p>
+                  <p><strong>Challenges:</strong> Two sites changed their layout and broke the scraper.</p>
+                  <p><strong>Next steps:</strong> Reach 5,000 pairs by 15 Mar; start fine-tuning mT5-small.</p>
+                </div>
+              </details>
+            </li>
+            <li>
+              <div class="item-row">
+                <span class="item-title">Report #1 · <time datetime="2027-01-28">28 Jan 2027</time></span>
+                <span class="badge badge--success">Reviewed</span>
+              </div>
+              <div class="meta">Literature review · 1 feedback comment · <a href="feedback.html#fb-progress-1">View</a></div>
+              <details class="disclosure disclosure--plain">
+                <summary>Show report</summary>
+                <div class="disclosure__body">
+                  <p><strong>Work completed:</strong> Finished the literature review chapter draft (34 sources) and the comparison table of summarisation models.</p>
+                  <p><strong>Challenges:</strong> Few Sinhala-specific papers; relying on related Indic languages.</p>
+                  <p><strong>Next steps:</strong> Write the methodology chapter; design the data collection pipeline.</p>
+                </div>
+              </details>
+            </li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <!-- ===================== STATE: project not IN_PROGRESS ===================== -->
+    <div class="mock-state" role="note">
+      <span class="mock-state__tag">Mock-up state</span>
+      Before the proposal is approved, the form is replaced by this notice.
+    </div>
+
+    <div class="alert alert--neutral" role="note">
+      <div class="alert__body">
+        <span class="alert__title">Progress reports are not open yet</span>
+        <p>Progress reports become available after your proposal is approved and your project is <span class="badge badge--info">In progress</span>.</p>
+      </div>
+      <div class="alert__actions">
+        <a class="btn btn--secondary btn--sm" href="proposal.html">Go to proposal</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

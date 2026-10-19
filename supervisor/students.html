@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My students · Supervisor · RPMS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER START -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="dashboard.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Research Project Management System</span>
+      </a>
+      <span class="period-tag">Research period 2026/2027</span>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle__label"><span class="nav-toggle__icon" aria-hidden="true"></span>Menu</label>
+      <div class="nav-panel">
+        <nav class="main-nav" aria-label="Supervisor">
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="invitations.html">Invitations <span class="nav-count">1<span class="visually-hidden"> pending</span></span></a></li>
+            <li><a href="students.html" aria-current="page">My students</a></li>
+            <li><a href="review-queue.html">Review queue <span class="nav-count">4<span class="visually-hidden"> to review</span></span></a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-menu__who">
+            <span class="user-menu__name">Dr. Ruwan Jayasinghe</span>
+            <span class="user-menu__role">Supervisor</span>
+          </div>
+          <div class="user-menu__links">
+            <a href="../shared/change-password.html">Change password</a>
+            <a class="user-menu__logout" href="../login.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <main id="main" class="page">
+    <div class="page-head">
+      <div class="page-head__text">
+        <p class="eyebrow">Supervision</p>
+        <h1>My students</h1>
+        <p class="lede">Students whose invitations you accepted in the 2026/2027 research period.</p>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="table table--wide">
+        <thead>
+          <tr>
+            <th scope="col">Student</th>
+            <th scope="col">Project title</th>
+            <th scope="col">Project status</th>
+            <th scope="col">Current milestone</th>
+            <th scope="col">Last activity</th>
+            <th scope="col">Flags</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Nimali Perera<span class="cell-sub">2022/CS/041</span></th>
+            <td>Abstractive Summarisation of Sinhala News Articles Using Transformer Models</td>
+            <td><span class="badge badge--info">In progress</span></td>
+            <td>Data collection and implementation<span class="cell-sub">Due 5 Mar 2027 · <span class="badge badge--info">In progress</span></span></td>
+            <td class="nowrap">Progress report #2<span class="cell-sub">4 Mar 2027</span></td>
+            <td><span class="badge badge--danger">Overdue</span><span class="cell-sub">1 milestone</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Kasun Wijesinghe<span class="cell-sub">2022/CS/017</span></th>
+            <td>Lightweight CNNs for Early Detection of Paddy Leaf Diseases on Smartphones</td>
+            <td><span class="badge badge--info">In progress</span></td>
+            <td>Evaluation<span class="cell-sub">Due 23 Apr 2027 · <span class="badge badge--info">In progress</span></span></td>
+            <td class="nowrap">Progress report #2<span class="cell-sub">5 Mar 2027</span></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <th scope="row">Tharushi Fernando<span class="cell-sub">2022/CS/063</span></th>
+            <td>Detecting Code-Mixed Sinhala–English Hate Speech on Social Media</td>
+            <td><span class="badge badge--info">Proposal submitted</span></td>
+            <td>Literature review<span class="cell-sub">Due 15 Jan 2027 · <span class="badge badge--neutral">Pending</span></span></td>
+            <td class="nowrap">Proposal v2<span class="cell-sub">5 Mar 2027</span></td>
+            <td><span class="badge badge--danger">Overdue</span><span class="cell-sub">3 milestones · has extensions</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="mt-5 section-gap">Milestones by student</h2>
+    <div class="stack-sm">
+      <details class="disclosure" open>
+        <summary>Nimali Perera: 2 of 5 completed</summary>
+        <div class="disclosure__body">
+          <ul class="item-list">
+            <li class="item-row"><span>Literature review · 15 Jan</span><span class="badge badge--success">Completed</span></li>
+            <li class="item-row"><span>Methodology and design · 12 Feb</span><span class="badge badge--success">Completed</span></li>
+            <li class="item-row"><span>Data collection and implementation · 5 Mar</span><span class="cluster"><span class="badge badge--info">In progress</span><span class="badge badge--danger">Overdue</span></span></li>
+            <li class="item-row"><span>Evaluation · 23 Apr</span><span class="badge badge--neutral">Pending</span></li>
+            <li class="item-row"><span>Draft final report (optional) · 14 May</span><span class="badge badge--neutral">Pending</span></li>
+          </ul>
+          <p class="mt-4 mb-0"><a href="review-progress.html">Update milestone status from the latest progress report</a></p>
+        </div>
+      </details>
+      <details class="disclosure">
+        <summary>Kasun Wijesinghe: 3 of 5 completed</summary>
+        <div class="disclosure__body">
+          <ul class="item-list">
+            <li class="item-row"><span>Literature review · 15 Jan</span><span class="badge badge--success">Completed</span></li>
+            <li class="item-row"><span>Methodology and design · 12 Feb</span><span class="badge badge--success">Completed</span></li>
+            <li class="item-row"><span>Data collection and implementation · 5 Mar</span><span class="badge badge--success">Completed</span></li>
+            <li class="item-row"><span>Evaluation · 23 Apr</span><span class="badge badge--info">In progress</span></li>
+            <li class="item-row"><span>Draft final report (optional) · 14 May</span><span class="badge badge--neutral">Pending</span></li>
+          </ul>
+        </div>
+      </details>
+      <details class="disclosure">
+        <summary>Tharushi Fernando: 0 of 5 completed</summary>
+        <div class="disclosure__body">
+          <ul class="item-list">
+            <li class="item-row"><span>Literature review · 15 Jan</span><span class="cluster"><span class="badge badge--neutral">Pending</span><span class="badge badge--danger">Overdue</span></span></li>
+            <li class="item-row"><span>Methodology and design · 12 Feb</span><span class="cluster"><span class="badge badge--neutral">Pending</span><span class="badge badge--danger">Overdue</span></span></li>
+            <li class="item-row"><span>Data collection and implementation · 5 Mar</span><span class="cluster"><span class="badge badge--neutral">Pending</span><span class="badge badge--danger">Overdue</span></span></li>
+            <li class="item-row"><span>Evaluation · 23 Apr</span><span class="badge badge--neutral">Pending</span></li>
+            <li class="item-row"><span>Draft final report (optional) · 14 May</span><span class="badge badge--neutral">Pending</span></li>
+          </ul>
+          <p class="hint mt-4">Tharushi had approved medical leave. Proposal deadlines were extended by the coordinator.</p>
+        </div>
+      </details>
+    </div>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

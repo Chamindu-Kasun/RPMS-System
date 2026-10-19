@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Final report · Student · RPMS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER START -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="dashboard.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Research Project Management System</span>
+      </a>
+      <span class="period-tag">Research period 2026/2027</span>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle__label"><span class="nav-toggle__icon" aria-hidden="true"></span>Menu</label>
+      <div class="nav-panel">
+        <nav class="main-nav" aria-label="Student">
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="project.html">My project</a></li>
+            <li><a href="invite-supervisor.html">Supervisor</a></li>
+            <li><a href="deadlines.html">Deadlines</a></li>
+            <li><a href="proposal.html">Proposal</a></li>
+            <li><a href="progress-reports.html">Progress reports</a></li>
+            <li><a href="final-report.html" aria-current="page">Final report</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-menu__who">
+            <span class="user-menu__name">Nimali Perera</span>
+            <span class="user-menu__role">Student</span>
+          </div>
+          <div class="user-menu__links">
+            <a href="../shared/change-password.html">Change password</a>
+            <a class="user-menu__logout" href="../login.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <main id="main" class="page">
+    <div class="page-head">
+      <div class="page-head__text">
+        <p class="eyebrow">Submission</p>
+        <h1>Final report <span class="badge badge--neutral">Draft</span></h1>
+        <p class="lede">Upload your final research report. Your supervisor reviews it. After they approve it and all mandatory milestones are complete, the coordinator marks your project completed.</p>
+      </div>
+    </div>
+
+    <div class="deadline-banner" role="note">
+      <span class="deadline-banner__label">Applicable deadline</span>
+      <span>Final report</span>
+      <span class="deadline-banner__date"><time datetime="2027-05-28T23:59">Fri 28 May 2027, 11:59 pm</time></span>
+      <span class="badge badge--hard">Hard</span>
+      <span class="deadline-banner__remaining">81 days left</span>
+    </div>
+
+    <div class="layout-detail">
+      <section class="card" aria-labelledby="form-heading">
+        <div class="card__head">
+          <h2 id="form-heading">Prepare version 1</h2>
+          <span class="meta">Draft saved 6 Mar 2027 · not visible to your supervisor</span>
+        </div>
+
+        <form class="form-grid" method="post" action="#" enctype="multipart/form-data">
+          <input type="hidden" name="csrf_token" value="">
+          <input type="hidden" name="submission_id" value="318">
+
+          <div class="field">
+            <label for="title">Report title <span class="req" aria-hidden="true">*</span></label>
+            <input class="input" type="text" id="title" name="title" maxlength="200" required
+                   value="Abstractive Summarisation of Sinhala News Articles Using Transformer Models">
+          </div>
+
+          <div class="field">
+            <label for="summary">Abstract <span class="req" aria-hidden="true">*</span></label>
+            <textarea class="textarea textarea--tall" id="summary" name="summary" maxlength="2000" required>This report presents a fine-tuned mT5 model for abstractive summarisation of Sinhala news articles, trained on a new corpus of about 5,000 article–summary pairs. [Results to be added after evaluation.]</textarea>
+          </div>
+
+          <div class="field">
+            <label for="report_file">Report document <span class="req" aria-hidden="true">*</span> <span class="muted">(PDF or DOCX, max 10 MB)</span></label>
+            <div class="file-drop">
+              <input type="file" id="report_file" name="report_file" required
+                     accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                     aria-describedby="file-hint">
+            </div>
+            <p class="hint" id="file-hint">Current draft file: nimali_final_report_draft.docx (2.4 MB). Choose a file only if you want to replace it.</p>
+          </div>
+
+          <div class="field">
+            <label for="change_notes">Notes for supervisor (what changed in this version)</label>
+            <textarea class="textarea" id="change_notes" name="change_notes" maxlength="1000" placeholder="For later versions: list how you addressed the feedback"></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn--secondary" type="submit" name="intent" value="draft">Save as draft</button>
+            <button class="btn btn--primary" type="submit" name="intent" value="submit">Submit version 1</button>
+            <p class="form-note"><span class="req" aria-hidden="true">*</span> required</p>
+          </div>
+        </form>
+      </section>
+
+      <aside class="stack" aria-label="Status and version history">
+        <section class="card" aria-labelledby="status-heading">
+          <h2 id="status-heading">Status</h2>
+          <dl class="dl-grid small">
+            <dt>Project</dt><dd><span class="badge badge--info">In progress</span></dd>
+            <dt>Final report</dt><dd><span class="badge badge--neutral">Draft</span></dd>
+            <dt>Supervisor</dt><dd>Dr. Ruwan Jayasinghe</dd>
+          </dl>
+          <div class="card__foot">
+            <p class="strong mb-0">Before completion</p>
+            <ul class="check-list mt-0">
+              <li><span class="mark mark--no" aria-hidden="true">✕</span> Final report approved by supervisor</li>
+              <li><span class="mark mark--no" aria-hidden="true">✕</span> Mandatory milestones complete (2 of 4)</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="card" aria-labelledby="versions-heading">
+          <h2 id="versions-heading">Version history</h2>
+          <ul class="item-list">
+            <li>
+              <div class="item-row">
+                <span class="item-title">Draft · saved <time datetime="2027-03-06">6 Mar 2027</time></span>
+                <span class="badge badge--neutral">Draft</span>
+              </div>
+              <div class="meta">nimali_final_report_draft.docx · 2.4 MB · <a href="#" download>Download</a></div>
+            </li>
+          </ul>
+          <p class="hint mt-4">Submitted versions appear here as v1, v2… and are never overwritten.</p>
+        </section>
+      </aside>
+    </div>
+
+    <!-- ===================== STATE: FINAL_SUBMITTED ===================== -->
+    <div class="mock-state" role="note">
+      <span class="mock-state__tag">Mock-up state</span>
+      FINAL_SUBMITTED: v1 is waiting for the supervisor's review.
+    </div>
+
+    <div class="alert alert--info" role="status">
+      <div class="alert__body">
+        <span class="alert__title">Version 1 submitted on time</span>
+        <p>Submitted on <time datetime="2027-05-24">Mon 24 May 2027</time>. Your project status is <span class="badge badge--info">Final submitted</span>. Your supervisor will review it. You can submit a new version only if they request a revision.</p>
+      </div>
+    </div>
+
+    <!-- ===================== STATE: APPROVED ===================== -->
+    <div class="mock-state" role="note">
+      <span class="mock-state__tag">Mock-up state</span>
+      APPROVED: read-only.
+    </div>
+
+    <div class="alert alert--success" role="status">
+      <div class="alert__body">
+        <span class="alert__title">Final report approved</span>
+        <p>Version 2 was approved on <time datetime="2027-06-08">8 Jun 2027</time> and is now read-only. The coordinator will mark your project <span class="badge badge--success">Completed</span> once all mandatory milestones are complete.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

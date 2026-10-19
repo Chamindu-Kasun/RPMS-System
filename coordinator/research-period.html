@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research period · Coordinator · RPMS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER START -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="dashboard.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Research Project Management System</span>
+      </a>
+      <span class="period-tag">Research period 2026/2027</span>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle__label"><span class="nav-toggle__icon" aria-hidden="true"></span>Menu</label>
+      <div class="nav-panel">
+        <nav class="main-nav" aria-label="Coordinator">
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="users.html">Users</a></li>
+            <li><a href="research-period.html" aria-current="page">Research period</a></li>
+            <li><a href="deadlines.html">Deadlines</a></li>
+            <li><a href="guidelines.html">Guidelines</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="extensions.html">Extensions</a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-menu__who">
+            <span class="user-menu__name">Dr. Malini Senanayake</span>
+            <span class="user-menu__role">Academic Coordinator</span>
+          </div>
+          <div class="user-menu__links">
+            <a href="../shared/change-password.html">Change password</a>
+            <a class="user-menu__logout" href="../login.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <main id="main" class="page">
+    <div class="page-head">
+      <div class="page-head__text">
+        <p class="eyebrow">Programme set-up</p>
+        <h1>Research period</h1>
+        <p class="lede">The academic year the deadlines, guidelines and milestones belong to. Only one period can be active at a time.</p>
+      </div>
+    </div>
+
+    <div class="layout-detail">
+      <section class="card" aria-labelledby="form-heading">
+        <div class="card__head">
+          <h2 id="form-heading">Edit research period</h2>
+          <span class="badge badge--success">Active</span>
+        </div>
+        <form class="form-grid form-grid--2" method="post" action="#">
+          <input type="hidden" name="csrf_token" value="">
+          <input type="hidden" name="period_id" value="2">
+
+          <div class="field span-2">
+            <label for="name">Period name <span class="req" aria-hidden="true">*</span></label>
+            <input class="input" type="text" id="name" name="name" required maxlength="40" value="2026/2027" aria-describedby="name-hint">
+            <p class="hint" id="name-hint">Usually the academic year, e.g. 2026/2027.</p>
+          </div>
+
+          <div class="field">
+            <label for="start_date">Start date <span class="req" aria-hidden="true">*</span></label>
+            <input class="input" type="date" id="start_date" name="start_date" required value="2026-10-01">
+          </div>
+
+          <div class="field">
+            <label for="end_date">End date <span class="req" aria-hidden="true">*</span></label>
+            <input class="input" type="date" id="end_date" name="end_date" required value="2027-06-30">
+          </div>
+
+          <div class="field span-2">
+            <label class="choice" for="is_active">
+              <input type="checkbox" id="is_active" name="is_active" value="1" checked>
+              <span><strong>Active period</strong>: students and supervisors see this period's published items. Activating it deactivates any other period.</span>
+            </label>
+          </div>
+
+          <div class="form-actions span-2">
+            <button class="btn btn--primary" type="submit">Save research period</button>
+            <a class="btn btn--secondary" href="dashboard.html">Cancel</a>
+            <p class="form-note"><span class="req" aria-hidden="true">*</span> required</p>
+          </div>
+        </form>
+      </section>
+
+      <aside class="stack" aria-label="Period contents">
+        <section class="card" aria-labelledby="contents-heading">
+          <h2 id="contents-heading">In this period</h2>
+          <dl class="dl-grid small">
+            <dt>Deadlines</dt><dd><a href="deadlines.html">8</a> (7 published)</dd>
+            <dt>Guidelines</dt><dd><a href="guidelines.html">5</a> (4 published)</dd>
+            <dt>Milestones</dt><dd><a href="milestones.html">5</a> (4 mandatory)</dd>
+            <dt>Eligible students</dt><dd><a href="users.html">5</a></dd>
+            <dt>Projects</dt><dd><a href="projects.html">5</a></dd>
+          </dl>
+        </section>
+      </aside>
+    </div>
+
+    <section class="section-gap" aria-labelledby="periods-heading">
+      <h2 id="periods-heading" class="mt-5">All research periods</h2>
+      <div class="table-wrap">
+        <table class="table table--medium">
+          <thead>
+            <tr>
+              <th scope="col">Period</th>
+              <th scope="col">Start</th>
+              <th scope="col">End</th>
+              <th scope="col">Status</th>
+              <th scope="col"><span class="visually-hidden">Actions</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">2026/2027</th>
+              <td><time datetime="2026-10-01">1 Oct 2026</time></td>
+              <td><time datetime="2027-06-30">30 Jun 2027</time></td>
+              <td><span class="badge badge--success">Active</span></td>
+              <td><a class="btn btn--ghost btn--sm" href="#form-heading">Edit</a></td>
+            </tr>
+            <tr>
+              <th scope="row">2025/2026</th>
+              <td><time datetime="2025-10-01">1 Oct 2025</time></td>
+              <td><time datetime="2026-06-30">30 Jun 2026</time></td>
+              <td><span class="badge badge--neutral">Inactive</span></td>
+              <td><a class="btn btn--ghost btn--sm" href="#form-heading">Edit</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

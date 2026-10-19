@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Review progress report: Nimali Perera #2 · Supervisor · RPMS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER START -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="dashboard.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Research Project Management System</span>
+      </a>
+      <span class="period-tag">Research period 2026/2027</span>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle__label"><span class="nav-toggle__icon" aria-hidden="true"></span>Menu</label>
+      <div class="nav-panel">
+        <nav class="main-nav" aria-label="Supervisor">
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="invitations.html">Invitations <span class="nav-count">1<span class="visually-hidden"> pending</span></span></a></li>
+            <li><a href="students.html">My students</a></li>
+            <li><a href="review-queue.html" aria-current="true">Review queue <span class="nav-count">4<span class="visually-hidden"> to review</span></span></a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-menu__who">
+            <span class="user-menu__name">Dr. Ruwan Jayasinghe</span>
+            <span class="user-menu__role">Supervisor</span>
+          </div>
+          <div class="user-menu__links">
+            <a href="../shared/change-password.html">Change password</a>
+            <a class="user-menu__logout" href="../login.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <main id="main" class="page">
+    <p class="breadcrumb"><a href="review-queue.html">Review queue</a> / Progress report #2</p>
+    <div class="page-head">
+      <div class="page-head__text">
+        <h1>Review progress report</h1>
+        <p class="lede">Nimali Perera · Abstractive Summarisation of Sinhala News Articles Using Transformer Models</p>
+      </div>
+    </div>
+
+    <div class="layout-detail">
+      <div class="stack">
+        <section class="card" aria-labelledby="report-heading">
+          <div class="card__head">
+            <div>
+              <h2 id="report-heading">Progress report #2</h2>
+              <p class="meta mb-0">Submitted <time datetime="2027-03-04T20:31">Thu 4 Mar 2027, 8:31 pm</time> · <span class="badge badge--success">On time</span></p>
+            </div>
+            <span class="badge badge--neutral">Not reviewed</span>
+          </div>
+
+          <dl class="dl-grid small">
+            <dt>Related milestone</dt>
+            <dd>Data collection and implementation · due 5 Mar 2027 <span class="badge badge--info">In progress</span> <span class="badge badge--danger">Overdue</span></dd>
+          </dl>
+
+          <h3 class="mt-5">Work completed</h3>
+          <div class="readonly-text small">Collected 4,120 article–summary pairs from three public news websites and removed 310 duplicates. Wrote the cleaning scripts (Unicode normalisation, boilerplate removal) and a train/validation/test split of 80/10/10. The TextRank baseline is implemented and gives ROUGE-L 0.21 on the validation set.</div>
+
+          <h3 class="mt-5">Challenges / blockers</h3>
+          <div class="readonly-text small">Two of the sites changed their page layout in February, which broke the scraper for about a week. The free Colab GPU quota is not enough for fine-tuning mT5-base; I may need lab GPU access.</div>
+
+          <h3 class="mt-5">Planned next steps</h3>
+          <div class="readonly-text small">Reach 5,000 pairs by 15 March. Start fine-tuning mT5-small, and mT5-base if lab GPUs are available. Draft the implementation section of chapter 4.</div>
+        </section>
+
+        <section class="card" aria-labelledby="fb-heading">
+          <h2 id="fb-heading">Feedback and review</h2>
+          <form class="form-grid" method="post" action="#">
+            <input type="hidden" name="csrf_token" value="">
+            <input type="hidden" name="update_id" value="88">
+
+            <div class="field">
+              <label for="comment">Feedback for the student</label>
+              <textarea class="textarea textarea--tall" id="comment" name="comment" aria-describedby="comment-hint">Good, steady progress, and the baseline result is useful. I'll request a lab GPU account for you this week. Let me know when you reach 5,000 pairs and I'll mark the data collection milestone complete.</textarea>
+              <p class="hint" id="comment-hint">Optional. If you write a comment it is saved as feedback linked to this report.</p>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn--primary" type="submit" name="action" value="mark_reviewed">Save and mark as reviewed</button>
+              <button class="btn btn--secondary" type="submit" name="action" value="comment">Save feedback only</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="card" aria-labelledby="ms-heading">
+          <h2 id="ms-heading">Update milestone status</h2>
+          <form class="form-grid form-grid--2" method="post" action="#">
+            <input type="hidden" name="csrf_token" value="">
+            <input type="hidden" name="milestone_id" value="3">
+            <input type="hidden" name="project_id" value="104">
+
+            <div class="field">
+              <span class="field-label">Milestone</span>
+              <p class="mb-0">Data collection and implementation<span class="cell-sub">Due 5 Mar 2027</span></p>
+            </div>
+
+            <div class="field">
+              <label for="status">Status</label>
+              <select class="select" id="status" name="status">
+                <option value="PENDING">Pending</option>
+                <option value="IN_PROGRESS" selected>In progress</option>
+                <option value="COMPLETED">Completed</option>
+              </select>
+            </div>
+
+            <div class="form-actions span-2">
+              <button class="btn btn--secondary" type="submit">Update status</button>
+              <p class="form-note">The overdue flag clears when the milestone is completed.</p>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <aside class="stack" aria-label="Student context">
+        <section class="card" aria-labelledby="prev-heading">
+          <h2 id="prev-heading">Earlier reports</h2>
+          <ul class="item-list">
+            <li>
+              <div class="item-row">
+                <span class="item-title">Report #1 · 28 Jan 2027</span>
+                <span class="badge badge--success">Reviewed</span>
+              </div>
+              <div class="meta">Literature review · 1 feedback comment</div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="card" aria-labelledby="mslist-heading">
+          <h2 id="mslist-heading">Nimali's milestones</h2>
+          <ul class="item-list small">
+            <li class="item-row"><span>Literature review</span><span class="badge badge--success">Completed</span></li>
+            <li class="item-row"><span>Methodology and design</span><span class="badge badge--success">Completed</span></li>
+            <li class="item-row"><span>Data collection and implementation</span><span class="badge badge--danger">Overdue</span></li>
+            <li class="item-row"><span>Evaluation</span><span class="badge badge--neutral">Pending</span></li>
+            <li class="item-row"><span>Draft final report</span><span class="badge badge--neutral">Pending</span></li>
+          </ul>
+        </section>
+
+        <section class="card card--muted" aria-labelledby="queue-heading">
+          <div class="card__head">
+            <h2 id="queue-heading">Next in queue</h2>
+            <a class="small" href="review-queue.html">All</a>
+          </div>
+          <ul class="item-list small">
+            <li class="item-row"><a href="review-submission.html">Proposal v2 · Tharushi</a><span class="badge badge--info">Submitted</span></li>
+            <li class="item-row"><a href="review-progress.html">Progress report #2 · Kasun</a><span class="badge badge--neutral">Not reviewed</span></li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

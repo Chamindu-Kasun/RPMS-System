@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Developer index · RPMS mock-ups</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="dev-index">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Developer-only page: not part of the real application, so it has no role navigation. -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Static UI mock-ups · developer index</span>
+      </a>
+      <span class="period-tag">Mock date: Mon 8 Mar 2027</span>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <div class="page-head">
+      <div class="page-head__text">
+        <p class="eyebrow">Not part of the application</p>
+        <h1>RPMS page index</h1>
+        <p class="lede">Every mock-up page, grouped by role. The pages use one sample cast and assume today is Monday 8 March 2027, in the 2026/2027 research period.</p>
+      </div>
+    </div>
+
+    <div class="layout-halves">
+      <section class="card" aria-labelledby="idx-shared">
+        <h2 id="idx-shared">Shared</h2>
+        <ul>
+          <li><a href="login.html">Log in</a></li>
+          <li><a href="shared/change-password.html">Change password</a></li>
+          <li><a href="shared/403.html">403 — Permission denied</a></li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="idx-cast">
+        <h2 id="idx-cast">Sample cast</h2>
+        <dl class="dl-grid small">
+          <dt>Student (persona)</dt><dd>Nimali Perera: <span class="badge badge--info">In progress</span></dd>
+          <dt>Other students</dt><dd>Kasun Wijesinghe, Tharushi Fernando, Dilan Rathnayake, Sachini Herath</dd>
+          <dt>Supervisor (persona)</dt><dd>Dr. Ruwan Jayasinghe</dd>
+          <dt>Other staff</dt><dd>Dr. Shalini Wickramasinghe, Prof. Anura Gunasekara</dd>
+          <dt>Coordinator</dt><dd>Dr. Malini Senanayake</dd>
+        </dl>
+      </section>
+
+      <section class="card" aria-labelledby="idx-student">
+        <h2 id="idx-student">Student <span class="badge badge--neutral">8 pages</span></h2>
+        <ul>
+          <li><a href="student/dashboard.html">Dashboard</a></li>
+          <li><a href="student/project.html">My project</a> (editable and locked states)</li>
+          <li><a href="student/invite-supervisor.html">Invite a supervisor</a> (three states)</li>
+          <li><a href="student/deadlines.html">Deadlines and guidelines</a></li>
+          <li><a href="student/proposal.html">Research proposal</a> (revision, blocked and approved states)</li>
+          <li><a href="student/progress-reports.html">Progress reports</a></li>
+          <li><a href="student/final-report.html">Final report</a></li>
+          <li><a href="student/feedback.html">Feedback</a></li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="idx-supervisor">
+        <h2 id="idx-supervisor">Supervisor <span class="badge badge--neutral">6 pages</span></h2>
+        <ul>
+          <li><a href="supervisor/dashboard.html">Dashboard</a></li>
+          <li><a href="supervisor/invitations.html">Invitations</a></li>
+          <li><a href="supervisor/students.html">My students</a></li>
+          <li><a href="supervisor/review-queue.html">Review queue</a></li>
+          <li><a href="supervisor/review-submission.html">Review a submission</a></li>
+          <li><a href="supervisor/review-progress.html">Review a progress report</a></li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="idx-coordinator">
+        <h2 id="idx-coordinator">Academic Coordinator <span class="badge badge--neutral">9 pages</span></h2>
+        <ul>
+          <li><a href="coordinator/dashboard.html">Dashboard</a></li>
+          <li><a href="coordinator/research-period.html">Research period</a></li>
+          <li><a href="coordinator/deadlines.html">Deadlines</a></li>
+          <li><a href="coordinator/guidelines.html">Guidelines</a></li>
+          <li><a href="coordinator/extensions.html">Extensions</a></li>
+          <li><a href="coordinator/milestones.html">Programme milestones</a></li>
+          <li><a href="coordinator/users.html">Users</a></li>
+          <li><a href="coordinator/projects.html">Projects</a></li>
+          <li><a href="coordinator/project-detail.html">Project detail</a> (includes the delete dialog)</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="idx-notes">
+        <h2 id="idx-notes">Conventions</h2>
+        <ul class="small">
+          <li>Shared header and footer blocks are marked <code>&lt;!-- HEADER START --&gt;</code> / <code>&lt;!-- FOOTER START --&gt;</code>.</li>
+          <li>Blocks labelled <span class="mock-state__tag">Mock-up state</span> show other states of the same page. Remove them when you build the PHP views.</li>
+          <li>State-changing forms use <code>method="post" action="#"</code> and carry a <code>csrf_token</code>. Search and filter forms use GET.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

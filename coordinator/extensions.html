@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Extensions · Coordinator · RPMS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER START -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="dashboard.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Research Project Management System</span>
+      </a>
+      <span class="period-tag">Research period 2026/2027</span>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle__label"><span class="nav-toggle__icon" aria-hidden="true"></span>Menu</label>
+      <div class="nav-panel">
+        <nav class="main-nav" aria-label="Coordinator">
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="users.html">Users</a></li>
+            <li><a href="research-period.html">Research period</a></li>
+            <li><a href="deadlines.html">Deadlines</a></li>
+            <li><a href="guidelines.html">Guidelines</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="extensions.html" aria-current="page">Extensions</a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-menu__who">
+            <span class="user-menu__name">Dr. Malini Senanayake</span>
+            <span class="user-menu__role">Academic Coordinator</span>
+          </div>
+          <div class="user-menu__links">
+            <a href="../shared/change-password.html">Change password</a>
+            <a class="user-menu__logout" href="../login.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <main id="main" class="page">
+    <div class="page-head">
+      <div class="page-head__text">
+        <p class="eyebrow">Deadlines</p>
+        <h1>Extensions</h1>
+        <p class="lede">An extension gives one student a later due date for one deadline. For a hard deadline it reopens submission for that student only. Students request extensions outside the system.</p>
+      </div>
+    </div>
+
+    <div class="layout-detail">
+      <section class="card" aria-labelledby="form-heading">
+        <h2 id="form-heading">Grant an extension</h2>
+        <form class="form-grid form-grid--2" method="post" action="#">
+          <input type="hidden" name="csrf_token" value="">
+
+          <div class="field">
+            <label for="student_id">Student <span class="req" aria-hidden="true">*</span></label>
+            <select class="select" id="student_id" name="student_id" required>
+              <option value="">Choose a student</option>
+              <option value="21">Nimali Perera (2022/CS/041)</option>
+              <option value="22">Kasun Wijesinghe (2022/CS/017)</option>
+              <option value="23">Tharushi Fernando (2022/CS/063)</option>
+              <option value="24">Dilan Rathnayake (2022/CS/029)</option>
+              <option value="25" selected>Sachini Herath (2022/CS/052)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="deadline_id">Deadline <span class="req" aria-hidden="true">*</span></label>
+            <select class="select" id="deadline_id" name="deadline_id" required>
+              <option value="">Choose a deadline</option>
+              <option value="1">Topic registration (23 Oct 2026, soft)</option>
+              <option value="2">Supervisor confirmation (6 Nov 2026, hard)</option>
+              <option value="3" selected>Proposal submission (27 Nov 2026, hard)</option>
+              <option value="4">Proposal revision (18 Dec 2026, hard)</option>
+              <option value="5">Progress report 1 (29 Jan 2027, soft)</option>
+              <option value="6">Progress report 2 (26 Mar 2027, soft)</option>
+              <option value="7">Final report (28 May 2027, hard)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="extended_due_date">New due date <span class="req" aria-hidden="true">*</span></label>
+            <input class="input" type="date" id="extended_due_date" name="extended_due_date" required value="2027-04-16" aria-describedby="date-hint">
+            <p class="hint" id="date-hint">Must be later than the original due date.</p>
+          </div>
+
+          <div class="field">
+            <label for="extended_due_time">New due time</label>
+            <input class="input" type="time" id="extended_due_time" name="extended_due_time" value="23:59">
+          </div>
+
+          <div class="field span-2">
+            <label for="reason">Reason <span class="req" aria-hidden="true">*</span></label>
+            <textarea class="textarea" id="reason" name="reason" required maxlength="500">Supervisor not yet confirmed after two rejected invitations. The proposal deadline is extended so the student can submit once a supervisor accepts.</textarea>
+          </div>
+
+          <div class="form-actions span-2">
+            <button class="btn btn--primary" type="submit">Grant extension</button>
+            <a class="btn btn--secondary" href="extensions.html">Cancel</a>
+            <p class="form-note"><span class="req" aria-hidden="true">*</span> required · the student and their supervisor see the new date</p>
+          </div>
+        </form>
+      </section>
+
+      <aside class="card card--muted" aria-labelledby="help-heading">
+        <h2 id="help-heading">How extensions work</h2>
+        <ul class="small mb-0">
+          <li><strong>Hard deadline:</strong> the student can submit until the new date.</li>
+          <li><strong>Soft deadline:</strong> the work is marked on time if it arrives before the new date.</li>
+          <li>Overdue flags use the extended date.</li>
+          <li>Every extension is recorded with the date and who granted it.</li>
+        </ul>
+      </aside>
+    </div>
+
+    <section class="section-gap" aria-labelledby="granted-heading">
+      <h2 id="granted-heading" class="mt-5">Granted extensions</h2>
+      <div class="table-wrap">
+        <table class="table table--wide">
+          <thead>
+            <tr>
+              <th scope="col">Student</th>
+              <th scope="col">Deadline</th>
+              <th scope="col">Original due</th>
+              <th scope="col">Extended to</th>
+              <th scope="col">Reason</th>
+              <th scope="col">Granted</th>
+              <th scope="col">Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Sachini Herath</th>
+              <td>Supervisor confirmation</td>
+              <td class="nowrap">6 Nov 2026</td>
+              <td class="nowrap"><strong>19 Mar 2027</strong></td>
+              <td>Two invitations rejected; still looking for a supervisor in the topic's area.</td>
+              <td class="nowrap">4 Mar 2027</td>
+              <td><span class="badge badge--neutral">Open</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Dilan Rathnayake</th>
+              <td>Proposal submission</td>
+              <td class="nowrap">27 Nov 2026</td>
+              <td class="nowrap"><strong>9 Apr 2027</strong></td>
+              <td>Agreed supervisor change; project restarted.</td>
+              <td class="nowrap">12 Feb 2027</td>
+              <td><span class="badge badge--neutral">Open</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Dilan Rathnayake</th>
+              <td>Supervisor confirmation</td>
+              <td class="nowrap">6 Nov 2026</td>
+              <td class="nowrap"><strong>12 Mar 2027</strong></td>
+              <td>Agreed supervisor change; project restarted.</td>
+              <td class="nowrap">12 Feb 2027</td>
+              <td><span class="badge badge--warn">Ends in 4 days</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Tharushi Fernando</th>
+              <td>Proposal revision</td>
+              <td class="nowrap">18 Dec 2026</td>
+              <td class="nowrap"><strong>12 Mar 2027</strong></td>
+              <td>Medical leave (certificate on file).</td>
+              <td class="nowrap">10 Feb 2027</td>
+              <td><span class="badge badge--success">Submitted on time</span><span class="cell-sub">v2 · 5 Mar</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Tharushi Fernando</th>
+              <td>Proposal submission</td>
+              <td class="nowrap">27 Nov 2026</td>
+              <td class="nowrap"><strong>19 Feb 2027</strong></td>
+              <td>Medical leave (certificate on file).</td>
+              <td class="nowrap">20 Nov 2026</td>
+              <td><span class="badge badge--success">Submitted on time</span><span class="cell-sub">v1 · 18 Feb</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

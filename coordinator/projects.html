@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects · Coordinator · RPMS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER START -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="dashboard.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Research Project Management System</span>
+      </a>
+      <span class="period-tag">Research period 2026/2027</span>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle__label"><span class="nav-toggle__icon" aria-hidden="true"></span>Menu</label>
+      <div class="nav-panel">
+        <nav class="main-nav" aria-label="Coordinator">
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="projects.html" aria-current="page">Projects</a></li>
+            <li><a href="users.html">Users</a></li>
+            <li><a href="research-period.html">Research period</a></li>
+            <li><a href="deadlines.html">Deadlines</a></li>
+            <li><a href="guidelines.html">Guidelines</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="extensions.html">Extensions</a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-menu__who">
+            <span class="user-menu__name">Dr. Malini Senanayake</span>
+            <span class="user-menu__role">Academic Coordinator</span>
+          </div>
+          <div class="user-menu__links">
+            <a href="../shared/change-password.html">Change password</a>
+            <a class="user-menu__logout" href="../login.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <main id="main" class="page">
+    <div class="page-head">
+      <div class="page-head__text">
+        <p class="eyebrow">Monitoring</p>
+        <h1>Research projects</h1>
+        <p class="lede">Every student creates their own project and invites their own supervisor. This list is for monitoring. Highlighted rows have no supervisor.</p>
+      </div>
+    </div>
+
+    <form class="search-bar card" method="get" action="#" role="search" aria-label="Search and filter projects">
+      <div class="field field--grow">
+        <label for="q">Search</label>
+        <input class="input" type="search" id="q" name="q" placeholder="Title, student name or index number">
+      </div>
+      <div class="field">
+        <label for="status">Status</label>
+        <select class="select" id="status" name="status">
+          <option value="">All statuses</option>
+          <option value="DRAFT">Draft</option>
+          <option value="AWAITING_SUPERVISOR">Awaiting supervisor</option>
+          <option value="SUPERVISOR_ASSIGNED">Supervisor assigned</option>
+          <option value="PROPOSAL_SUBMITTED">Proposal submitted</option>
+          <option value="REVISION_REQUIRED">Revision required</option>
+          <option value="IN_PROGRESS">In progress</option>
+          <option value="FINAL_SUBMITTED">Final submitted</option>
+          <option value="COMPLETED">Completed</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="supervisor_id">Supervisor</label>
+        <select class="select" id="supervisor_id" name="supervisor_id">
+          <option value="">All supervisors</option>
+          <option value="none">No supervisor</option>
+          <option value="11">Dr. Ruwan Jayasinghe</option>
+          <option value="12">Dr. Shalini Wickramasinghe</option>
+          <option value="13">Prof. Anura Gunasekara</option>
+        </select>
+      </div>
+      <div class="field">
+        <span class="field-label">Overdue</span>
+        <label class="choice" for="overdue"><input type="checkbox" id="overdue" name="overdue" value="1"> <span>Only with overdue items</span></label>
+      </div>
+      <button class="btn btn--secondary" type="submit">Apply</button>
+    </form>
+
+    <div class="table-wrap section-gap">
+      <table class="table table--wide">
+        <caption>5 projects in 2026/2027</caption>
+        <thead>
+          <tr>
+            <th scope="col">Project</th>
+            <th scope="col">Student</th>
+            <th scope="col">Supervisor</th>
+            <th scope="col">Status</th>
+            <th scope="col">Milestones</th>
+            <th scope="col">Overdue</th>
+            <th scope="col">Last activity</th>
+            <th scope="col"><span class="visually-hidden">Actions</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="is-highlight">
+            <th scope="row">Explainable Fake Review Detection for Sri Lankan E-commerce Platforms<span class="cell-sub">Natural Language Processing</span></th>
+            <td>Dilan Rathnayake<span class="cell-sub">2022/CS/029</span></td>
+            <td><span class="badge badge--warn">No supervisor</span><span class="cell-sub">Invited Dr. Jayasinghe 26 Feb · pending 10 days</span></td>
+            <td><span class="badge badge--neutral">Awaiting supervisor</span></td>
+            <td>0 / 5</td>
+            <td><span class="badge badge--danger">3 overdue</span></td>
+            <td class="nowrap">26 Feb 2027</td>
+            <td><a class="btn btn--secondary btn--sm" href="project-detail.html">View</a></td>
+          </tr>
+          <tr class="is-highlight">
+            <th scope="row">Predicting Student Dropout Risk in Online Courses Using Interpretable Machine Learning<span class="cell-sub">Educational Data Mining</span></th>
+            <td>Sachini Herath<span class="cell-sub">2022/CS/052</span></td>
+            <td><span class="badge badge--warn">No supervisor</span><span class="cell-sub">2 invitations rejected</span></td>
+            <td><span class="badge badge--neutral">Draft</span></td>
+            <td>0 / 5</td>
+            <td><span class="badge badge--danger">4 overdue</span></td>
+            <td class="nowrap">3 Mar 2027</td>
+            <td><a class="btn btn--secondary btn--sm" href="project-detail.html">View</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Detecting Code-Mixed Sinhala–English Hate Speech on Social Media<span class="cell-sub">Natural Language Processing</span></th>
+            <td>Tharushi Fernando<span class="cell-sub">2022/CS/063</span></td>
+            <td>Dr. Ruwan Jayasinghe</td>
+            <td><span class="badge badge--info">Proposal submitted</span></td>
+            <td>0 / 5</td>
+            <td><span class="badge badge--danger">3 overdue</span></td>
+            <td class="nowrap">5 Mar 2027</td>
+            <td><a class="btn btn--secondary btn--sm" href="project-detail.html">View</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Abstractive Summarisation of Sinhala News Articles Using Transformer Models<span class="cell-sub">Natural Language Processing</span></th>
+            <td>Nimali Perera<span class="cell-sub">2022/CS/041</span></td>
+            <td>Dr. Ruwan Jayasinghe</td>
+            <td><span class="badge badge--info">In progress</span></td>
+            <td>2 / 5</td>
+            <td><span class="badge badge--danger">1 overdue</span></td>
+            <td class="nowrap">4 Mar 2027</td>
+            <td><a class="btn btn--secondary btn--sm" href="project-detail.html">View</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Lightweight CNNs for Early Detection of Paddy Leaf Diseases on Smartphones<span class="cell-sub">Machine Learning / Computer Vision</span></th>
+            <td>Kasun Wijesinghe<span class="cell-sub">2022/CS/017</span></td>
+            <td>Dr. Ruwan Jayasinghe</td>
+            <td><span class="badge badge--info">In progress</span></td>
+            <td>3 / 5</td>
+            <td>—</td>
+            <td class="nowrap">5 Mar 2027</td>
+            <td><a class="btn btn--secondary btn--sm" href="project-detail.html">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="table-foot">Showing 5 of 5 · sorted by projects that need attention first</p>
+    </div>
+
+    <details class="disclosure section-gap">
+      <summary>Project status guide</summary>
+      <div class="disclosure__body">
+        <dl class="badge-legend">
+          <dt><span class="badge badge--neutral">Draft</span></dt><dd>Project record created; no supervisor and no pending invitation.</dd>
+          <dt><span class="badge badge--neutral">Awaiting supervisor</span></dt><dd>An invitation is pending.</dd>
+          <dt><span class="badge badge--info">Supervisor assigned</span></dt><dd>Invitation accepted; topic locked; proposal in preparation.</dd>
+          <dt><span class="badge badge--info">Proposal submitted</span></dt><dd>A proposal version is waiting for review.</dd>
+          <dt><span class="badge badge--warn">Revision required</span></dt><dd>The supervisor asked for changes to the proposal.</dd>
+          <dt><span class="badge badge--info">In progress</span></dt><dd>Proposal approved; milestones and progress reports are active.</dd>
+          <dt><span class="badge badge--info">Final submitted</span></dt><dd>Final report waiting for review.</dd>
+          <dt><span class="badge badge--success">Completed</span></dt><dd>Marked completed by the coordinator; all records read-only.</dd>
+        </dl>
+      </div>
+    </details>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

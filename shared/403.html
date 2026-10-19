@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Permission denied · RPMS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER START -->
+  <!-- Shared page: shown here with the student header. In PHP, include the header for the logged-in user's role. -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="../student/dashboard.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Research Project Management System</span>
+      </a>
+      <span class="period-tag">Research period 2026/2027</span>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle__label"><span class="nav-toggle__icon" aria-hidden="true"></span>Menu</label>
+      <div class="nav-panel">
+        <nav class="main-nav" aria-label="Student">
+          <ul>
+            <li><a href="../student/dashboard.html">Dashboard</a></li>
+            <li><a href="../student/project.html">My project</a></li>
+            <li><a href="../student/invite-supervisor.html">Supervisor</a></li>
+            <li><a href="../student/deadlines.html">Deadlines</a></li>
+            <li><a href="../student/proposal.html">Proposal</a></li>
+            <li><a href="../student/progress-reports.html">Progress reports</a></li>
+            <li><a href="../student/final-report.html">Final report</a></li>
+            <li><a href="../student/feedback.html">Feedback</a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-menu__who">
+            <span class="user-menu__name">Nimali Perera</span>
+            <span class="user-menu__role">Student</span>
+          </div>
+          <div class="user-menu__links">
+            <a href="change-password.html">Change password</a>
+            <a class="user-menu__logout" href="../login.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <main id="main" class="page">
+    <div class="error-page card">
+      <p class="error-page__code">Error 403</p>
+      <h1>You do not have permission to view this page</h1>
+      <p class="muted">This page belongs to another user or role. If you think you should have access, contact the Academic Coordinator.</p>
+      <p class="mt-5"><a class="btn btn--primary" href="../student/dashboard.html">Back to your dashboard</a></p>
+    </div>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

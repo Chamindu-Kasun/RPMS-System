@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in · RPMS</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <main id="main" class="auth-page">
+    <div class="auth-card">
+      <div class="auth-card__brand">
+        <span class="brand__mark" aria-hidden="true">RPMS</span>
+        <p>Research Project Management System<br>Individual Fourth-Year Research Projects</p>
+      </div>
+
+      <h1>Log in</h1>
+
+      <!-- Shown only after a failed attempt. Deliberately generic: it does not say which field was wrong. -->
+      <div class="alert alert--danger" role="alert">
+        <div class="alert__body">
+          <p>Invalid email or password.</p>
+        </div>
+      </div>
+
+      <form class="form-grid mt-4" method="post" action="#">
+        <input type="hidden" name="csrf_token" value="">
+
+        <div class="field">
+          <label for="email">Email address <span class="req" aria-hidden="true">*</span></label>
+          <input class="input" type="email" id="email" name="email" autocomplete="username" required
+                 placeholder="name@uni.example" value="nimali.perera@uni.example">
+        </div>
+
+        <div class="field">
+          <label for="password">Password <span class="req" aria-hidden="true">*</span></label>
+          <input class="input" type="password" id="password" name="password" autocomplete="current-password" required>
+        </div>
+
+        <button class="btn btn--primary btn--block" type="submit">Log in</button>
+        <p class="form-note"><span class="req" aria-hidden="true">*</span> required</p>
+      </form>
+
+      <p class="auth-note">Accounts are created by the Academic Coordinator.</p>
+    </div>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

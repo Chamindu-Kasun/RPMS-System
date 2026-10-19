@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feedback · Student · RPMS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER START -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="dashboard.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Research Project Management System</span>
+      </a>
+      <span class="period-tag">Research period 2026/2027</span>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle__label"><span class="nav-toggle__icon" aria-hidden="true"></span>Menu</label>
+      <div class="nav-panel">
+        <nav class="main-nav" aria-label="Student">
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="project.html">My project</a></li>
+            <li><a href="invite-supervisor.html">Supervisor</a></li>
+            <li><a href="deadlines.html">Deadlines</a></li>
+            <li><a href="proposal.html">Proposal</a></li>
+            <li><a href="progress-reports.html">Progress reports</a></li>
+            <li><a href="final-report.html">Final report</a></li>
+            <li><a href="feedback.html" aria-current="page">Feedback</a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-menu__who">
+            <span class="user-menu__name">Nimali Perera</span>
+            <span class="user-menu__role">Student</span>
+          </div>
+          <div class="user-menu__links">
+            <a href="../shared/change-password.html">Change password</a>
+            <a class="user-menu__logout" href="../login.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <main id="main" class="page">
+    <div class="page-head">
+      <div class="page-head__text">
+        <p class="eyebrow">History</p>
+        <h1>Feedback</h1>
+        <p class="lede">All supervisor feedback, grouped by the version or progress report it refers to. Newest first.</p>
+      </div>
+    </div>
+
+    <div class="layout-detail">
+      <div class="stack">
+        <section class="card" id="fb-progress-2" aria-labelledby="g-progress-2">
+          <div class="card__head">
+            <h2 id="g-progress-2">Progress report #2</h2>
+            <span class="meta">Submitted 4 Mar 2027 · <span class="badge badge--neutral">Not reviewed</span></span>
+          </div>
+          <p class="empty-state small">No feedback yet.</p>
+        </section>
+
+        <section class="card" id="fb-progress-1" aria-labelledby="g-progress-1">
+          <div class="card__head">
+            <h2 id="g-progress-1">Progress report #1</h2>
+            <span class="meta">Submitted 28 Jan 2027 · <span class="badge badge--success">Reviewed</span></span>
+          </div>
+          <article class="feedback-item">
+            <div class="feedback-item__head">
+              <span class="feedback-item__who">Dr. Ruwan Jayasinghe · <time datetime="2027-02-02T10:15">2 Feb 2027, 10:15 am</time></span>
+              <span class="badge badge--neutral">Comment only</span>
+            </div>
+            <blockquote class="small"><p>Good progress on the literature review. Add the recent work on low-resource summarisation for other Indic languages; it supports your choice of mT5. Keep the data collection on schedule, because the 5 March milestone is close.</p></blockquote>
+          </article>
+        </section>
+
+        <section class="card" id="fb-proposal-v3" aria-labelledby="g-proposal-v3">
+          <div class="card__head">
+            <h2 id="g-proposal-v3">Proposal · version 3</h2>
+            <span class="meta">Submitted 17 Dec 2026 · <span class="badge badge--success">Approved</span></span>
+          </div>
+          <article class="feedback-item">
+            <div class="feedback-item__head">
+              <span class="feedback-item__who">Dr. Ruwan Jayasinghe · <time datetime="2026-12-22T14:40">22 Dec 2026, 2:40 pm</time></span>
+              <span class="badge badge--success">Approve</span>
+            </div>
+            <blockquote class="small"><p>Approved. The revised evaluation plan, ROUGE plus a human evaluation of 100 summaries, is appropriate, and the dataset size is now justified. Well addressed.</p></blockquote>
+          </article>
+        </section>
+
+        <section class="card" id="fb-proposal-v2" aria-labelledby="g-proposal-v2">
+          <div class="card__head">
+            <h2 id="g-proposal-v2">Proposal · version 2</h2>
+            <span class="meta">Submitted 11 Dec 2026 · <span class="badge badge--warn">Revision requested</span></span>
+          </div>
+          <article class="feedback-item">
+            <div class="feedback-item__head">
+              <span class="feedback-item__who">Dr. Ruwan Jayasinghe · <time datetime="2026-12-15T09:05">15 Dec 2026, 9:05 am</time></span>
+              <span class="badge badge--warn">Request revision</span>
+            </div>
+            <blockquote class="small"><p>Clarify how you will build the reference summaries, since this decides the quality of the whole evaluation. Also justify the dataset size: 2,000 articles may be too small for fine-tuning. A simple extractive baseline would make the comparison stronger.</p></blockquote>
+          </article>
+        </section>
+
+        <section class="card" id="fb-proposal-v1" aria-labelledby="g-proposal-v1">
+          <div class="card__head">
+            <h2 id="g-proposal-v1">Proposal · version 1</h2>
+            <span class="meta">Submitted 25 Nov 2026 · <span class="badge badge--warn">Revision requested</span></span>
+          </div>
+          <article class="feedback-item">
+            <div class="feedback-item__head">
+              <span class="feedback-item__who">Dr. Ruwan Jayasinghe · <time datetime="2026-12-02T16:20">2 Dec 2026, 4:20 pm</time></span>
+              <span class="badge badge--warn">Request revision</span>
+            </div>
+            <blockquote class="small"><p>Narrow the scope to news articles only. Including social media posts makes the project too large for one year. Rewrite objectives 2 and 3 to match.</p></blockquote>
+          </article>
+          <article class="feedback-item">
+            <div class="feedback-item__head">
+              <span class="feedback-item__who">Dr. Ruwan Jayasinghe · <time datetime="2026-11-30T11:00">30 Nov 2026, 11:00 am</time></span>
+              <span class="badge badge--neutral">Comment only</span>
+            </div>
+            <blockquote class="small"><p>Good topic choice. I have read the first half and will send detailed comments by Wednesday.</p></blockquote>
+          </article>
+        </section>
+      </div>
+
+      <aside class="stack" aria-label="Feedback summary">
+        <section class="card" aria-labelledby="summary-heading">
+          <h2 id="summary-heading">Summary</h2>
+          <dl class="dl-grid small">
+            <dt>Feedback items</dt><dd>5</dd>
+            <dt>Revision requests</dt><dd>2 (both addressed)</dd>
+            <dt>Latest</dt><dd>2 Feb 2027</dd>
+          </dl>
+        </section>
+        <section class="card card--muted" aria-labelledby="jump-heading">
+          <h2 id="jump-heading">Jump to</h2>
+          <ul class="list-plain small">
+            <li><a href="#fb-progress-2">Progress report #2</a></li>
+            <li><a href="#fb-progress-1">Progress report #1</a></li>
+            <li><a href="#fb-proposal-v3">Proposal v3</a></li>
+            <li><a href="#fb-proposal-v2">Proposal v2</a></li>
+            <li><a href="#fb-proposal-v1">Proposal v1</a></li>
+          </ul>
+        </section>
+        <section class="card" aria-labelledby="decisions-heading">
+          <h2 id="decisions-heading">Decision types</h2>
+          <dl class="badge-legend">
+            <dt><span class="badge badge--neutral">Comment only</span></dt><dd>No change in status</dd>
+            <dt><span class="badge badge--warn">Request revision</span></dt><dd>Submit a new version</dd>
+            <dt><span class="badge badge--success">Approve</span></dt><dd>Approved, read-only</dd>
+          </dl>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

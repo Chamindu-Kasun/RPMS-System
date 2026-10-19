@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Review submission: Tharushi Fernando, proposal v2 · Supervisor · RPMS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER START -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="dashboard.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Research Project Management System</span>
+      </a>
+      <span class="period-tag">Research period 2026/2027</span>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle__label"><span class="nav-toggle__icon" aria-hidden="true"></span>Menu</label>
+      <div class="nav-panel">
+        <nav class="main-nav" aria-label="Supervisor">
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="invitations.html">Invitations <span class="nav-count">1<span class="visually-hidden"> pending</span></span></a></li>
+            <li><a href="students.html">My students</a></li>
+            <li><a href="review-queue.html" aria-current="true">Review queue <span class="nav-count">4<span class="visually-hidden"> to review</span></span></a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-menu__who">
+            <span class="user-menu__name">Dr. Ruwan Jayasinghe</span>
+            <span class="user-menu__role">Supervisor</span>
+          </div>
+          <div class="user-menu__links">
+            <a href="../shared/change-password.html">Change password</a>
+            <a class="user-menu__logout" href="../login.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <main id="main" class="page">
+    <p class="breadcrumb"><a href="review-queue.html">Review queue</a> / Proposal v2</p>
+    <div class="page-head">
+      <div class="page-head__text">
+        <h1>Review submission</h1>
+        <p class="lede">Read the version, then record one decision with a comment. The student sees your feedback straight away.</p>
+      </div>
+    </div>
+
+    <div class="layout-detail">
+      <div class="stack">
+        <section class="card" aria-labelledby="sub-heading">
+          <div class="card__head">
+            <div>
+              <h2 id="sub-heading">Research proposal</h2>
+              <p class="meta mb-0">Student: Tharushi Fernando · Project: Detecting Code-Mixed Sinhala–English Hate Speech on Social Media</p>
+            </div>
+            <span class="badge badge--info">Submitted</span>
+          </div>
+
+          <form class="search-bar" method="get" action="#" aria-label="Choose a version">
+            <div class="field field--grow">
+              <label for="version_id">Version</label>
+              <select class="select" id="version_id" name="version_id">
+                <option value="402" selected>v2 · submitted 5 Mar 2027 (latest)</option>
+                <option value="377">v1 · submitted 18 Feb 2027</option>
+              </select>
+            </div>
+            <button class="btn btn--secondary" type="submit">Show version</button>
+          </form>
+
+          <dl class="dl-grid mt-5 small">
+            <dt>Submitted</dt>
+            <dd><time datetime="2027-03-05T15:42">Fri 5 Mar 2027, 3:42 pm</time> <span class="badge badge--success">On time</span></dd>
+            <dt>Deadline</dt>
+            <dd>Proposal revision · extended to 12 Mar 2027 <span class="badge badge--hard">Hard</span></dd>
+          </dl>
+
+          <h3 class="mt-5">Summary</h3>
+          <div class="readonly-text small">Hate speech on Sri Lankan social media is often written in code-mixed Sinhala and English, including romanised Sinhala ("Singlish"), which existing English-only classifiers handle poorly. This project builds an annotated dataset of 6,000 public Facebook and YouTube comments, defines a three-level annotation scheme (hate, offensive, neither) with an inter-annotator agreement target of κ ≥ 0.6, and compares a fine-tuned XLM-R model with a character n-gram baseline.</div>
+
+          <h3 class="mt-5">Student's notes on this version</h3>
+          <div class="readonly-text small">Defined "code-mixed" operationally (section 2.1): a comment with at least one Sinhala and one English token. Replaced the binary labels with a three-level scheme and added the annotation guidelines as Appendix A. Reduced the dataset target from 10,000 to 6,000 comments so annotation fits the timeline.</div>
+
+          <div class="btn-row mt-5">
+            <a class="btn btn--secondary" href="#" download>↓ Download proposal_v2.pdf (1.4 MB)</a>
+          </div>
+        </section>
+
+        <section class="card" aria-labelledby="feedback-form-heading">
+          <h2 id="feedback-form-heading">Your feedback</h2>
+          <form class="form-grid" method="post" action="#">
+            <input type="hidden" name="csrf_token" value="">
+            <input type="hidden" name="version_id" value="402">
+
+            <div class="field">
+              <label for="comment">Comment <span class="req" aria-hidden="true">*</span></label>
+              <textarea class="textarea textarea--tall" id="comment" name="comment" required aria-describedby="comment-hint" placeholder="Write comments for the student (required for every decision)"></textarea>
+              <p class="hint" id="comment-hint">A comment is required for every decision, including approval.</p>
+            </div>
+
+            <fieldset class="choice-group">
+              <legend>Decision <span class="req" aria-hidden="true">*</span></legend>
+              <div class="choice-list">
+                <label class="choice"><input type="radio" name="decision" value="COMMENT" required> <span>Comment only</span></label>
+                <label class="choice"><input type="radio" name="decision" value="REVISION_REQUESTED" checked> <span>Request revision</span></label>
+                <label class="choice"><input type="radio" name="decision" value="APPROVED"> <span>Approve</span></label>
+              </div>
+            </fieldset>
+
+            <div class="alert alert--neutral" role="note">
+              <div class="alert__body">
+                <p><strong>Comment only</strong> keeps the status Submitted. <strong>Request revision</strong> asks the student for a new version. <strong>Approve</strong> makes this proposal read-only and moves the project to <span class="badge badge--info">In progress</span>.</p>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn--primary" type="submit">Submit feedback</button>
+              <a class="btn btn--secondary" href="review-queue.html">Back to queue</a>
+              <p class="form-note"><span class="req" aria-hidden="true">*</span> required</p>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <aside class="stack" aria-label="Feedback history and review queue">
+        <section class="card" aria-labelledby="history-heading">
+          <h2 id="history-heading">Feedback history</h2>
+          <ul class="item-list">
+            <li>
+              <div class="item-row">
+                <span class="item-title">v1 · Request revision</span>
+                <span class="badge badge--warn">Request revision</span>
+              </div>
+              <p class="small mb-0">“Define ‘code-mixed’ operationally and explain how you will annotate consistently. 10,000 comments is not realistic for one annotator…”</p>
+              <div class="meta">24 Feb 2027</div>
+            </li>
+            <li>
+              <div class="item-row">
+                <span class="item-title">v1 · Comment</span>
+                <span class="badge badge--neutral">Comment only</span>
+              </div>
+              <p class="small mb-0">“Interesting dataset idea. Check the platforms' terms for collecting public comments.”</p>
+              <div class="meta">20 Feb 2027</div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="card" aria-labelledby="queue-heading">
+          <div class="card__head">
+            <h2 id="queue-heading">Review queue</h2>
+            <a class="small" href="review-queue.html">All</a>
+          </div>
+          <ul class="item-list">
+            <li class="item-row"><a href="review-progress.html">Progress report #1 · Kasun</a><span class="badge badge--neutral">Not reviewed</span></li>
+            <li class="item-row"><a href="review-progress.html">Progress report #2 · Nimali</a><span class="badge badge--neutral">Not reviewed</span></li>
+            <li class="item-row"><span>Proposal v2 · Tharushi <span class="cell-sub">You are here</span></span><span class="badge badge--info">Submitted</span></li>
+            <li class="item-row"><a href="review-progress.html">Progress report #2 · Kasun</a><span class="badge badge--neutral">Not reviewed</span></li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

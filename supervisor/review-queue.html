@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Review queue · Supervisor · RPMS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER START -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="dashboard.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Research Project Management System</span>
+      </a>
+      <span class="period-tag">Research period 2026/2027</span>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle__label"><span class="nav-toggle__icon" aria-hidden="true"></span>Menu</label>
+      <div class="nav-panel">
+        <nav class="main-nav" aria-label="Supervisor">
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="invitations.html">Invitations <span class="nav-count">1<span class="visually-hidden"> pending</span></span></a></li>
+            <li><a href="students.html">My students</a></li>
+            <li><a href="review-queue.html" aria-current="page">Review queue <span class="nav-count">4<span class="visually-hidden"> to review</span></span></a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-menu__who">
+            <span class="user-menu__name">Dr. Ruwan Jayasinghe</span>
+            <span class="user-menu__role">Supervisor</span>
+          </div>
+          <div class="user-menu__links">
+            <a href="../shared/change-password.html">Change password</a>
+            <a class="user-menu__logout" href="../login.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <main id="main" class="page">
+    <div class="page-head">
+      <div class="page-head__text">
+        <p class="eyebrow">Review</p>
+        <h1>Review queue</h1>
+        <p class="lede">Submitted proposals, documents and final reports, plus progress reports you haven't reviewed. Oldest first.</p>
+      </div>
+    </div>
+
+    <form class="search-bar card" method="get" action="#" role="search" aria-label="Filter the review queue">
+      <div class="field">
+        <label for="type">Type</label>
+        <select class="select" id="type" name="type">
+          <option value="">All types</option>
+          <option value="PROPOSAL">Proposal</option>
+          <option value="DOCUMENT">Research document</option>
+          <option value="FINAL_REPORT">Final report</option>
+          <option value="PROGRESS_REPORT">Progress report</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="student_id">Student</label>
+        <select class="select" id="student_id" name="student_id">
+          <option value="">All my students</option>
+          <option value="21">Nimali Perera</option>
+          <option value="22">Kasun Wijesinghe</option>
+          <option value="23">Tharushi Fernando</option>
+        </select>
+      </div>
+      <button class="btn btn--secondary" type="submit">Apply filters</button>
+    </form>
+
+    <div class="table-wrap section-gap">
+      <table class="table table--wide">
+        <caption>4 items waiting for your review</caption>
+        <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Type</th>
+            <th scope="col">Student</th>
+            <th scope="col">Submitted</th>
+            <th scope="col">Timing</th>
+            <th scope="col">Status</th>
+            <th scope="col"><span class="visually-hidden">Action</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Progress report #1<span class="cell-sub">Milestone: Literature review</span></th>
+            <td>Progress report</td>
+            <td>Kasun Wijesinghe</td>
+            <td class="nowrap"><time datetime="2027-02-02">2 Feb 2027</time><span class="cell-sub">Waiting 34 days</span></td>
+            <td><span class="badge badge--warn">Late</span><span class="cell-sub">Due 29 Jan (soft)</span></td>
+            <td><span class="badge badge--neutral">Not reviewed</span></td>
+            <td><a class="btn btn--primary btn--sm" href="review-progress.html">Review</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Progress report #2<span class="cell-sub">Milestone: Data collection and implementation</span></th>
+            <td>Progress report</td>
+            <td>Nimali Perera</td>
+            <td class="nowrap"><time datetime="2027-03-04">4 Mar 2027</time><span class="cell-sub">Waiting 4 days</span></td>
+            <td><span class="badge badge--success">On time</span></td>
+            <td><span class="badge badge--neutral">Not reviewed</span></td>
+            <td><a class="btn btn--primary btn--sm" href="review-progress.html">Review</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Research proposal · v2</th>
+            <td>Proposal</td>
+            <td>Tharushi Fernando</td>
+            <td class="nowrap"><time datetime="2027-03-05">5 Mar 2027</time><span class="cell-sub">Waiting 3 days</span></td>
+            <td><span class="badge badge--success">On time</span><span class="cell-sub">Extension to 12 Mar</span></td>
+            <td><span class="badge badge--info">Submitted</span></td>
+            <td><a class="btn btn--primary btn--sm" href="review-submission.html">Review</a></td>
+          </tr>
+          <tr>
+            <th scope="row">Progress report #2<span class="cell-sub">Milestone: Evaluation</span></th>
+            <td>Progress report</td>
+            <td>Kasun Wijesinghe</td>
+            <td class="nowrap"><time datetime="2027-03-05">5 Mar 2027</time><span class="cell-sub">Waiting 3 days</span></td>
+            <td><span class="badge badge--success">On time</span></td>
+            <td><span class="badge badge--neutral">Not reviewed</span></td>
+            <td><a class="btn btn--primary btn--sm" href="review-progress.html">Review</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="table-foot">No research documents or final reports are waiting.</p>
+    </div>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard · Coordinator · RPMS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER START -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="dashboard.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Research Project Management System</span>
+      </a>
+      <span class="period-tag">Research period 2026/2027</span>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle__label"><span class="nav-toggle__icon" aria-hidden="true"></span>Menu</label>
+      <div class="nav-panel">
+        <nav class="main-nav" aria-label="Coordinator">
+          <ul>
+            <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="users.html">Users</a></li>
+            <li><a href="research-period.html">Research period</a></li>
+            <li><a href="deadlines.html">Deadlines</a></li>
+            <li><a href="guidelines.html">Guidelines</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="extensions.html">Extensions</a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-menu__who">
+            <span class="user-menu__name">Dr. Malini Senanayake</span>
+            <span class="user-menu__role">Academic Coordinator</span>
+          </div>
+          <div class="user-menu__links">
+            <a href="../shared/change-password.html">Change password</a>
+            <a class="user-menu__logout" href="../login.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <main id="main" class="page">
+    <div class="page-head">
+      <div class="page-head__text">
+        <p class="eyebrow">Monday 8 March 2027 · 5 projects</p>
+        <h1>Programme overview</h1>
+        <p class="lede">Monitoring for the 2026/2027 fourth-year individual research projects.</p>
+      </div>
+      <div class="page-head__actions">
+        <a class="btn btn--secondary" href="projects.html">All projects</a>
+      </div>
+    </div>
+
+    <div class="stack">
+      <div class="stats">
+        <a class="stat stat--danger" href="projects.html">
+          <span class="stat__label">Students without a supervisor</span>
+          <span class="stat__value">2</span>
+          <span class="stat__note">Dilan R. · Sachini H.</span>
+        </a>
+        <a class="stat stat--warn" href="projects.html">
+          <span class="stat__label">Pending invitations</span>
+          <span class="stat__value">1</span>
+          <span class="stat__note">1 pending more than 7 days</span>
+        </a>
+        <a class="stat stat--info" href="projects.html">
+          <span class="stat__label">Pending reviews</span>
+          <span class="stat__value">4</span>
+          <span class="stat__note">Oldest waiting 34 days</span>
+        </a>
+        <a class="stat stat--danger" href="projects.html">
+          <span class="stat__label">Overdue activities</span>
+          <span class="stat__value">11</span>
+          <span class="stat__note">Across 4 projects</span>
+        </a>
+        <a class="stat stat--success" href="projects.html">
+          <span class="stat__label">Completed projects</span>
+          <span class="stat__value">0</span>
+          <span class="stat__note">of 5 · final reports due 28 May</span>
+        </a>
+      </div>
+
+      <div class="layout-detail">
+        <div class="stack">
+          <section class="card" aria-labelledby="attention-heading">
+            <h2 id="attention-heading">Needs attention</h2>
+            <ul class="item-list">
+              <li>
+                <div class="item-row">
+                  <span class="item-title">Invitation pending for 10 days</span>
+                  <span class="badge badge--warn">More than 7 days</span>
+                </div>
+                <p class="small mb-0">Dilan Rathnayake → Dr. Ruwan Jayasinghe, sent 26 Feb 2027. Dilan's supervisor confirmation extension ends 12 Mar.</p>
+              </li>
+              <li>
+                <div class="item-row">
+                  <span class="item-title">Two rejected invitations, no supervisor</span>
+                  <span class="badge badge--danger">Rejected ×2</span>
+                </div>
+                <p class="small mb-0">Sachini Herath's project is back in <span class="badge badge--neutral">Draft</span>. Proposal submission is overdue and has no extension.</p>
+              </li>
+              <li>
+                <div class="item-row">
+                  <span class="item-title">Progress report unreviewed for 34 days</span>
+                  <span class="badge badge--neutral">Not reviewed</span>
+                </div>
+                <p class="small mb-0">Kasun Wijesinghe's report #1, supervisor Dr. Ruwan Jayasinghe.</p>
+              </li>
+            </ul>
+          </section>
+
+          <section class="card" aria-labelledby="status-heading">
+            <h2 id="status-heading">Projects by status</h2>
+            <div class="table-wrap">
+              <table class="table table--medium">
+                <thead>
+                  <tr><th scope="col">Status</th><th scope="col">Projects</th><th scope="col">Students</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row"><span class="badge badge--neutral">Draft</span></th><td>1</td><td>Sachini Herath</td></tr>
+                  <tr><th scope="row"><span class="badge badge--neutral">Awaiting supervisor</span></th><td>1</td><td>Dilan Rathnayake</td></tr>
+                  <tr><th scope="row"><span class="badge badge--info">Supervisor assigned</span></th><td>0</td><td>—</td></tr>
+                  <tr><th scope="row"><span class="badge badge--info">Proposal submitted</span></th><td>1</td><td>Tharushi Fernando</td></tr>
+                  <tr><th scope="row"><span class="badge badge--warn">Revision required</span></th><td>0</td><td>—</td></tr>
+                  <tr><th scope="row"><span class="badge badge--info">In progress</span></th><td>2</td><td>Nimali Perera, Kasun Wijesinghe</td></tr>
+                  <tr><th scope="row"><span class="badge badge--info">Final submitted</span></th><td>0</td><td>—</td></tr>
+                  <tr><th scope="row"><span class="badge badge--success">Completed</span></th><td>0</td><td>—</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+
+        <aside class="stack" aria-label="Deadlines and recent activity">
+          <section class="card" aria-labelledby="next-heading">
+            <div class="card__head">
+              <h2 id="next-heading">Next deadlines</h2>
+              <a class="small" href="deadlines.html">Manage</a>
+            </div>
+            <ul class="item-list">
+              <li>
+                <div class="item-row"><span class="item-title">Progress report 2</span><span class="badge badge--soft">Soft</span></div>
+                <div class="meta">Fri 26 Mar 2027 · 18 days · 2 of 5 submitted</div>
+              </li>
+              <li>
+                <div class="item-row"><span class="item-title">Final report</span><span class="badge badge--hard">Hard</span></div>
+                <div class="meta">Fri 28 May 2027 · 81 days · 0 of 5 submitted</div>
+              </li>
+              <li>
+                <div class="item-row"><span class="item-title">Final report revision</span><span class="badge badge--neutral">Draft</span></div>
+                <div class="meta">Fri 18 Jun 2027 · not yet published</div>
+              </li>
+            </ul>
+            <div class="card__foot">
+              <strong>Extensions ending soon:</strong> Tharushi F. (12 Mar), Dilan R. (12 Mar), Sachini H. (19 Mar). <a href="extensions.html">View</a>
+            </div>
+          </section>
+
+          <section class="card" aria-labelledby="activity-heading">
+            <h2 id="activity-heading">Recent activity</h2>
+            <ol class="timeline">
+              <li><time datetime="2027-03-05T15:42">5 Mar, 3:42 pm</time>Tharushi Fernando submitted proposal v2</li>
+              <li><time datetime="2027-03-05T10:05">5 Mar, 10:05 am</time>Kasun Wijesinghe submitted progress report #2</li>
+              <li><time datetime="2027-03-04T20:31">4 Mar, 8:31 pm</time>Nimali Perera submitted progress report #2</li>
+              <li><time datetime="2027-03-03T12:10">3 Mar, 12:10 pm</time>Dr. Ruwan Jayasinghe rejected Sachini Herath's invitation</li>
+              <li><time datetime="2027-03-02T09:30">2 Mar, 9:30 am</time>Kasun's milestone “Data collection and implementation” marked completed</li>
+              <li><time datetime="2027-03-01T08:45">1 Mar, 8:45 am</time>You published the guideline “Final report formatting guide”</li>
+              <li><time datetime="2027-02-26T09:12">26 Feb, 9:12 am</time>Dilan Rathnayake invited Dr. Ruwan Jayasinghe</li>
+            </ol>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

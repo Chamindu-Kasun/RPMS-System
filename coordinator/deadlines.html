@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deadlines · Coordinator · RPMS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER START -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="dashboard.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Research Project Management System</span>
+      </a>
+      <span class="period-tag">Research period 2026/2027</span>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle__label"><span class="nav-toggle__icon" aria-hidden="true"></span>Menu</label>
+      <div class="nav-panel">
+        <nav class="main-nav" aria-label="Coordinator">
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="users.html">Users</a></li>
+            <li><a href="research-period.html">Research period</a></li>
+            <li><a href="deadlines.html" aria-current="page">Deadlines</a></li>
+            <li><a href="guidelines.html">Guidelines</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="extensions.html">Extensions</a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-menu__who">
+            <span class="user-menu__name">Dr. Malini Senanayake</span>
+            <span class="user-menu__role">Academic Coordinator</span>
+          </div>
+          <div class="user-menu__links">
+            <a href="../shared/change-password.html">Change password</a>
+            <a class="user-menu__logout" href="../login.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <main id="main" class="page">
+    <div class="page-head">
+      <div class="page-head__text">
+        <p class="eyebrow">Research period 2026/2027</p>
+        <h1>Deadlines</h1>
+        <p class="lede">Draft deadlines are visible only to you. Published deadlines appear on every student's and supervisor's dashboard.</p>
+      </div>
+      <div class="page-head__actions">
+        <a class="btn btn--primary" href="#deadline-form">New deadline</a>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="table table--wide">
+        <thead>
+          <tr>
+            <th scope="col">Stage</th>
+            <th scope="col">Title</th>
+            <th scope="col">Due date</th>
+            <th scope="col">Type</th>
+            <th scope="col">Visibility</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Topic registration</td>
+            <th scope="row">Register your project record</th>
+            <td class="nowrap"><time datetime="2026-10-23T23:59">23 Oct 2026, 11:59 pm</time></td>
+            <td><span class="badge badge--soft">Soft</span></td>
+            <td><span class="badge badge--success">Published</span></td>
+            <td>
+              <div class="cell-actions">
+                <a class="btn btn--ghost btn--sm" href="#deadline-form">Edit</a>
+                <form class="inline-form" method="post" action="#"><input type="hidden" name="csrf_token" value=""><input type="hidden" name="deadline_id" value="1"><input type="hidden" name="status" value="DRAFT"><button class="btn btn--secondary btn--sm" type="submit">Unpublish</button></form>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Supervisor confirmation</td>
+            <th scope="row">Supervisor accepts your invitation</th>
+            <td class="nowrap"><time datetime="2026-11-06T23:59">6 Nov 2026, 11:59 pm</time></td>
+            <td><span class="badge badge--hard">Hard</span></td>
+            <td><span class="badge badge--success">Published</span></td>
+            <td>
+              <div class="cell-actions">
+                <a class="btn btn--ghost btn--sm" href="#deadline-form">Edit</a>
+                <form class="inline-form" method="post" action="#"><input type="hidden" name="csrf_token" value=""><input type="hidden" name="deadline_id" value="2"><input type="hidden" name="status" value="DRAFT"><button class="btn btn--secondary btn--sm" type="submit">Unpublish</button></form>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Proposal submission</td>
+            <th scope="row">Submit your research proposal</th>
+            <td class="nowrap"><time datetime="2026-11-27T23:59">27 Nov 2026, 11:59 pm</time></td>
+            <td><span class="badge badge--hard">Hard</span></td>
+            <td><span class="badge badge--success">Published</span></td>
+            <td>
+              <div class="cell-actions">
+                <a class="btn btn--ghost btn--sm" href="#deadline-form">Edit</a>
+                <form class="inline-form" method="post" action="#"><input type="hidden" name="csrf_token" value=""><input type="hidden" name="deadline_id" value="3"><input type="hidden" name="status" value="DRAFT"><button class="btn btn--secondary btn--sm" type="submit">Unpublish</button></form>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Proposal revision</td>
+            <th scope="row">Submit the revised proposal</th>
+            <td class="nowrap"><time datetime="2026-12-18T23:59">18 Dec 2026, 11:59 pm</time></td>
+            <td><span class="badge badge--hard">Hard</span></td>
+            <td><span class="badge badge--success">Published</span></td>
+            <td>
+              <div class="cell-actions">
+                <a class="btn btn--ghost btn--sm" href="#deadline-form">Edit</a>
+                <form class="inline-form" method="post" action="#"><input type="hidden" name="csrf_token" value=""><input type="hidden" name="deadline_id" value="4"><input type="hidden" name="status" value="DRAFT"><button class="btn btn--secondary btn--sm" type="submit">Unpublish</button></form>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Progress report 1</td>
+            <th scope="row">First progress report</th>
+            <td class="nowrap"><time datetime="2027-01-29T23:59">29 Jan 2027, 11:59 pm</time></td>
+            <td><span class="badge badge--soft">Soft</span></td>
+            <td><span class="badge badge--success">Published</span></td>
+            <td>
+              <div class="cell-actions">
+                <a class="btn btn--ghost btn--sm" href="#deadline-form">Edit</a>
+                <form class="inline-form" method="post" action="#"><input type="hidden" name="csrf_token" value=""><input type="hidden" name="deadline_id" value="5"><input type="hidden" name="status" value="DRAFT"><button class="btn btn--secondary btn--sm" type="submit">Unpublish</button></form>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Progress report 2</td>
+            <th scope="row">Second progress report</th>
+            <td class="nowrap"><time datetime="2027-03-26T23:59">26 Mar 2027, 11:59 pm</time></td>
+            <td><span class="badge badge--soft">Soft</span></td>
+            <td><span class="badge badge--success">Published</span></td>
+            <td>
+              <div class="cell-actions">
+                <a class="btn btn--ghost btn--sm" href="#deadline-form">Edit</a>
+                <form class="inline-form" method="post" action="#"><input type="hidden" name="csrf_token" value=""><input type="hidden" name="deadline_id" value="6"><input type="hidden" name="status" value="DRAFT"><button class="btn btn--secondary btn--sm" type="submit">Unpublish</button></form>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Final report</td>
+            <th scope="row">Submit the final research report</th>
+            <td class="nowrap"><time datetime="2027-05-28T23:59">28 May 2027, 11:59 pm</time></td>
+            <td><span class="badge badge--hard">Hard</span></td>
+            <td><span class="badge badge--success">Published</span></td>
+            <td>
+              <div class="cell-actions">
+                <a class="btn btn--ghost btn--sm" href="#deadline-form">Edit</a>
+                <form class="inline-form" method="post" action="#"><input type="hidden" name="csrf_token" value=""><input type="hidden" name="deadline_id" value="7"><input type="hidden" name="status" value="DRAFT"><button class="btn btn--secondary btn--sm" type="submit">Unpublish</button></form>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Final report revision</td>
+            <th scope="row">Submit the revised final report</th>
+            <td class="nowrap"><time datetime="2027-06-18T23:59">18 Jun 2027, 11:59 pm</time></td>
+            <td><span class="badge badge--hard">Hard</span></td>
+            <td><span class="badge badge--neutral">Draft</span></td>
+            <td>
+              <div class="cell-actions">
+                <a class="btn btn--ghost btn--sm" href="#deadline-form">Edit</a>
+                <form class="inline-form" method="post" action="#"><input type="hidden" name="csrf_token" value=""><input type="hidden" name="deadline_id" value="8"><input type="hidden" name="status" value="PUBLISHED"><button class="btn btn--primary btn--sm" type="submit">Publish</button></form>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section class="card section-gap" id="deadline-form" aria-labelledby="form-heading">
+      <div class="card__head">
+        <h2 id="form-heading">Edit deadline: Final report revision</h2>
+        <span class="badge badge--neutral">Draft</span>
+      </div>
+      <form class="form-grid form-grid--2" method="post" action="#">
+        <input type="hidden" name="csrf_token" value="">
+        <input type="hidden" name="deadline_id" value="8">
+
+        <div class="field">
+          <label for="stage">Stage <span class="req" aria-hidden="true">*</span></label>
+          <select class="select" id="stage" name="stage" required>
+            <option value="TOPIC_REGISTRATION">Topic registration</option>
+            <option value="SUPERVISOR_CONFIRMATION">Supervisor confirmation</option>
+            <option value="PROPOSAL_SUBMISSION">Proposal submission</option>
+            <option value="PROPOSAL_REVISION">Proposal revision</option>
+            <option value="PROGRESS_REPORT_1">Progress report 1</option>
+            <option value="PROGRESS_REPORT_2">Progress report 2</option>
+            <option value="FINAL_REPORT">Final report</option>
+            <option value="FINAL_REPORT_REVISION" selected>Final report revision</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="title">Title <span class="req" aria-hidden="true">*</span></label>
+          <input class="input" type="text" id="title" name="title" required maxlength="150" value="Submit the revised final report">
+        </div>
+
+        <div class="field">
+          <label for="due_date">Due date <span class="req" aria-hidden="true">*</span></label>
+          <input class="input" type="date" id="due_date" name="due_date" required value="2027-06-18">
+        </div>
+
+        <div class="field">
+          <label for="due_time">Due time <span class="req" aria-hidden="true">*</span></label>
+          <input class="input" type="time" id="due_time" name="due_time" required value="23:59">
+        </div>
+
+        <div class="field span-2">
+          <label for="description">Description</label>
+          <textarea class="textarea" id="description" name="description" maxlength="1000">Only for students whose supervisor requested a revision of the final report. Submit the revised version with notes describing the changes.</textarea>
+        </div>
+
+        <fieldset class="choice-group">
+          <legend>Deadline type <span class="req" aria-hidden="true">*</span></legend>
+          <div class="choice-list">
+            <label class="choice"><input type="radio" name="deadline_type" value="HARD" checked required> <span><strong>Hard</strong>: blocks submission after the due date unless the student has an extension</span></label>
+            <label class="choice"><input type="radio" name="deadline_type" value="SOFT"> <span><strong>Soft</strong>: allows late submission, marked Late</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="choice-group">
+          <legend>Visibility <span class="req" aria-hidden="true">*</span></legend>
+          <div class="choice-list">
+            <label class="choice"><input type="radio" name="status" value="DRAFT" checked required> <span>Draft (only you)</span></label>
+            <label class="choice"><input type="radio" name="status" value="PUBLISHED"> <span>Published (all students and supervisors)</span></label>
+          </div>
+        </fieldset>
+
+        <div class="form-actions span-2">
+          <button class="btn btn--primary" type="submit">Save deadline</button>
+          <a class="btn btn--secondary" href="deadlines.html">Cancel</a>
+          <p class="form-note"><span class="req" aria-hidden="true">*</span> required</p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

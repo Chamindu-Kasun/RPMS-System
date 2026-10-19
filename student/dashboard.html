@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard · Student · RPMS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER START -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="dashboard.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Research Project Management System</span>
+      </a>
+      <span class="period-tag">Research period 2026/2027</span>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle__label"><span class="nav-toggle__icon" aria-hidden="true"></span>Menu</label>
+      <div class="nav-panel">
+        <nav class="main-nav" aria-label="Student">
+          <ul>
+            <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+            <li><a href="project.html">My project</a></li>
+            <li><a href="invite-supervisor.html">Supervisor</a></li>
+            <li><a href="deadlines.html">Deadlines</a></li>
+            <li><a href="proposal.html">Proposal</a></li>
+            <li><a href="progress-reports.html">Progress reports</a></li>
+            <li><a href="final-report.html">Final report</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-menu__who">
+            <span class="user-menu__name">Nimali Perera</span>
+            <span class="user-menu__role">Student</span>
+          </div>
+          <div class="user-menu__links">
+            <a href="../shared/change-password.html">Change password</a>
+            <a class="user-menu__logout" href="../login.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <main id="main" class="page">
+    <div class="page-head">
+      <div class="page-head__text">
+        <p class="eyebrow">Monday 8 March 2027</p>
+        <h1>Welcome, Nimali</h1>
+        <p class="lede">Here is what needs your attention next.</p>
+      </div>
+    </div>
+
+    <div class="stack">
+      <div class="alert alert--warn" role="status">
+        <div class="alert__body">
+          <span class="alert__title">Action needed: a milestone is overdue</span>
+          <p><strong>Data collection and implementation</strong> was due on <time datetime="2027-03-05">Fri 5 Mar 2027</time> and is not marked complete. Tell your supervisor where you are in your next progress report.</p>
+        </div>
+        <div class="alert__actions">
+          <a class="btn btn--primary btn--sm" href="progress-reports.html">Submit progress report</a>
+        </div>
+      </div>
+
+      <div class="alert alert--info" role="status">
+        <div class="alert__body">
+          <span class="alert__title">New guideline published</span>
+          <p>The coordinator published the <a href="deadlines.html#guidelines">Final report formatting guide</a> on 1 Mar 2027.</p>
+        </div>
+      </div>
+
+      <div class="layout-detail">
+        <div class="stack">
+          <section class="card" aria-labelledby="project-heading">
+            <div class="card__head">
+              <h2 id="project-heading">My research project</h2>
+              <a class="small" href="project.html">View project</a>
+            </div>
+            <p class="project-title">Abstractive Summarisation of Sinhala News Articles Using Transformer Models</p>
+            <div class="meta-row">
+              <span>Supervisor: <strong>Dr. Ruwan Jayasinghe</strong></span>
+              <span>Area: Natural Language Processing</span>
+            </div>
+            <div class="cluster mt-4">
+              <span class="small strong">Project:</span> <span class="badge badge--info">In progress</span>
+              <span class="small strong">Proposal:</span> <span class="badge badge--success">Approved (v3)</span>
+              <span class="small strong">Final report:</span> <span class="badge badge--neutral">Draft</span>
+            </div>
+
+            <div class="mt-5">
+              <div class="progress-label">
+                <span class="strong">Milestone progress</span>
+                <span class="muted">2 of 5 completed (40%)</span>
+              </div>
+              <div class="progress" role="img" aria-label="Milestone progress: 2 of 5 completed">
+                <span style="width: 40%"></span>
+              </div>
+            </div>
+          </section>
+
+          <section class="card" aria-labelledby="milestones-heading">
+            <div class="card__head">
+              <h2 id="milestones-heading">Milestones</h2>
+              <span class="meta">Set by the coordinator; your supervisor updates the status</span>
+            </div>
+            <div class="table-wrap">
+              <table class="table table--medium">
+                <thead>
+                  <tr>
+                    <th scope="col">Milestone</th>
+                    <th scope="col">Due date</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Literature review</th>
+                    <td><time datetime="2027-01-15">15 Jan 2027</time></td>
+                    <td><span class="badge badge--success">Completed</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Methodology and design</th>
+                    <td><time datetime="2027-02-12">12 Feb 2027</time></td>
+                    <td><span class="badge badge--success">Completed</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Data collection and implementation</th>
+                    <td><time datetime="2027-03-05">5 Mar 2027</time></td>
+                    <td class="cluster"><span class="badge badge--info">In progress</span> <span class="badge badge--danger">Overdue</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Evaluation</th>
+                    <td><time datetime="2027-04-23">23 Apr 2027</time></td>
+                    <td><span class="badge badge--neutral">Pending</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Draft final report <span class="cell-sub">Optional</span></th>
+                    <td><time datetime="2027-05-14">14 May 2027</time></td>
+                    <td><span class="badge badge--neutral">Pending</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+
+        <aside class="stack" aria-label="Deadlines, feedback and quick actions">
+          <section class="card" aria-labelledby="quick-heading">
+            <h2 id="quick-heading">Quick actions</h2>
+            <div class="quick-actions">
+              <a class="btn btn--primary" href="progress-reports.html">New progress report</a>
+              <a class="btn btn--secondary" href="final-report.html">Final report draft</a>
+              <a class="btn btn--secondary" href="feedback.html">View feedback</a>
+            </div>
+          </section>
+
+          <section class="card" aria-labelledby="deadlines-heading">
+            <div class="card__head">
+              <h2 id="deadlines-heading">Upcoming deadlines</h2>
+              <a class="small" href="deadlines.html">All deadlines</a>
+            </div>
+            <ul class="item-list">
+              <li>
+                <div class="item-row">
+                  <span class="item-title">Progress report 2</span>
+                  <span class="badge badge--soft">Soft</span>
+                </div>
+                <div class="meta"><time datetime="2027-03-26">Fri 26 Mar 2027</time> · 18 days left</div>
+                <div class="mt-0"><span class="badge badge--success">Submitted on time</span></div>
+              </li>
+              <li>
+                <div class="item-row">
+                  <span class="item-title">Final report</span>
+                  <span class="badge badge--hard">Hard</span>
+                </div>
+                <div class="meta"><time datetime="2027-05-28">Fri 28 May 2027</time> · 81 days left</div>
+                <div><span class="badge badge--neutral">Not submitted</span></div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="card" aria-labelledby="feedback-heading">
+            <div class="card__head">
+              <h2 id="feedback-heading">Recent feedback</h2>
+              <a class="small" href="feedback.html">All feedback</a>
+            </div>
+            <ul class="item-list">
+              <li>
+                <div class="item-row">
+                  <a class="item-title" href="feedback.html#fb-progress-1">Progress report #1</a>
+                  <span class="badge badge--neutral">Comment only</span>
+                </div>
+                <p class="small mb-0">“Good progress on the literature review. Add the recent work on low-resource summarisation…”</p>
+                <div class="meta">Dr. Ruwan Jayasinghe · 2 Feb 2027</div>
+              </li>
+              <li>
+                <div class="item-row">
+                  <a class="item-title" href="feedback.html#fb-proposal-v3">Proposal v3</a>
+                  <span class="badge badge--success">Approve</span>
+                </div>
+                <p class="small mb-0">“Approved. The revised evaluation plan is appropriate…”</p>
+                <div class="meta">Dr. Ruwan Jayasinghe · 22 Dec 2026</div>
+              </li>
+              <li>
+                <div class="item-row">
+                  <a class="item-title" href="feedback.html#fb-proposal-v2">Proposal v2</a>
+                  <span class="badge badge--warn">Request revision</span>
+                </div>
+                <p class="small mb-0">“Clarify how you will build the reference summaries…”</p>
+                <div class="meta">Dr. Ruwan Jayasinghe · 15 Dec 2026</div>
+              </li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

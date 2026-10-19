@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard · Supervisor · RPMS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER START -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="dashboard.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Research Project Management System</span>
+      </a>
+      <span class="period-tag">Research period 2026/2027</span>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle__label"><span class="nav-toggle__icon" aria-hidden="true"></span>Menu</label>
+      <div class="nav-panel">
+        <nav class="main-nav" aria-label="Supervisor">
+          <ul>
+            <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+            <li><a href="invitations.html">Invitations <span class="nav-count">1<span class="visually-hidden"> pending</span></span></a></li>
+            <li><a href="students.html">My students</a></li>
+            <li><a href="review-queue.html">Review queue <span class="nav-count">4<span class="visually-hidden"> to review</span></span></a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-menu__who">
+            <span class="user-menu__name">Dr. Ruwan Jayasinghe</span>
+            <span class="user-menu__role">Supervisor</span>
+          </div>
+          <div class="user-menu__links">
+            <a href="../shared/change-password.html">Change password</a>
+            <a class="user-menu__logout" href="../login.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <main id="main" class="page">
+    <div class="page-head">
+      <div class="page-head__text">
+        <p class="eyebrow">Monday 8 March 2027</p>
+        <h1>Welcome, Dr. Jayasinghe</h1>
+        <p class="lede">You supervise 3 students this research period.</p>
+      </div>
+    </div>
+
+    <div class="stack">
+      <div class="alert alert--warn" role="status">
+        <div class="alert__body">
+          <span class="alert__title">Invitation waiting for 10 days</span>
+          <p>Dilan Rathnayake invited you to supervise “Explainable Fake Review Detection for Sri Lankan E-commerce Platforms” on 26 Feb 2027. The student's extension for supervisor confirmation ends on 12 Mar 2027.</p>
+        </div>
+        <div class="alert__actions">
+          <a class="btn btn--primary btn--sm" href="invitations.html">Respond</a>
+        </div>
+      </div>
+
+      <div class="stats">
+        <a class="stat stat--warn" href="invitations.html">
+          <span class="stat__label">Pending invitations</span>
+          <span class="stat__value">1</span>
+          <span class="stat__note">1 waiting more than 7 days</span>
+        </a>
+        <a class="stat stat--info" href="review-queue.html">
+          <span class="stat__label">Items to review</span>
+          <span class="stat__value">4</span>
+          <span class="stat__note">Oldest waiting 34 days</span>
+        </a>
+        <a class="stat stat--danger" href="students.html">
+          <span class="stat__label">Overdue student activities</span>
+          <span class="stat__value">4</span>
+          <span class="stat__note">Across 2 students</span>
+        </a>
+        <a class="stat" href="students.html">
+          <span class="stat__label">Students supervised</span>
+          <span class="stat__value">3</span>
+          <span class="stat__note">2 in progress · 1 proposal stage</span>
+        </a>
+      </div>
+
+      <div class="layout-detail">
+        <section class="card" aria-labelledby="students-heading">
+          <div class="card__head">
+            <h2 id="students-heading">My students</h2>
+            <a class="small" href="students.html">View all</a>
+          </div>
+          <div class="table-wrap">
+            <table class="table table--medium">
+              <thead>
+                <tr>
+                  <th scope="col">Student</th>
+                  <th scope="col">Project status</th>
+                  <th scope="col">Flags</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Nimali Perera<span class="cell-sub">Abstractive Summarisation of Sinhala News Articles…</span></th>
+                  <td><span class="badge badge--info">In progress</span></td>
+                  <td><span class="badge badge--danger">Overdue (1)</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Kasun Wijesinghe<span class="cell-sub">Lightweight CNNs for Early Detection of Paddy Leaf Diseases…</span></th>
+                  <td><span class="badge badge--info">In progress</span></td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <th scope="row">Tharushi Fernando<span class="cell-sub">Detecting Code-Mixed Sinhala–English Hate Speech…</span></th>
+                  <td><span class="badge badge--info">Proposal submitted</span></td>
+                  <td><span class="badge badge--danger">Overdue (3)</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <aside class="card" aria-labelledby="queue-heading">
+          <div class="card__head">
+            <h2 id="queue-heading">Review queue</h2>
+            <a class="small" href="review-queue.html">Open queue</a>
+          </div>
+          <ul class="item-list">
+            <li>
+              <div class="item-row">
+                <a class="item-title" href="review-progress.html">Progress report #1</a>
+                <span class="badge badge--warn">Late</span>
+              </div>
+              <div class="meta">Kasun Wijesinghe · 2 Feb 2027 · <span class="badge badge--neutral">Not reviewed</span></div>
+            </li>
+            <li>
+              <div class="item-row">
+                <a class="item-title" href="review-progress.html">Progress report #2</a>
+                <span class="badge badge--success">On time</span>
+              </div>
+              <div class="meta">Nimali Perera · 4 Mar 2027 · <span class="badge badge--neutral">Not reviewed</span></div>
+            </li>
+            <li>
+              <div class="item-row">
+                <a class="item-title" href="review-submission.html">Proposal v2</a>
+                <span class="badge badge--success">On time</span>
+              </div>
+              <div class="meta">Tharushi Fernando · 5 Mar 2027 · <span class="badge badge--info">Submitted</span></div>
+            </li>
+          </ul>
+          <div class="card__foot"><a href="review-queue.html">+1 more item</a></div>
+        </aside>
+      </div>
+
+      <section class="card card--muted" aria-labelledby="deadlines-heading">
+        <div class="card__head">
+          <h2 id="deadlines-heading">Next programme deadlines</h2>
+        </div>
+        <ul class="item-list">
+          <li class="item-row"><span><strong>Progress report 2</strong> · Fri 26 Mar 2027</span><span class="cluster"><span class="badge badge--soft">Soft</span><span class="meta">2 of 3 students submitted</span></span></li>
+          <li class="item-row"><span><strong>Final report</strong> · Fri 28 May 2027</span><span class="cluster"><span class="badge badge--hard">Hard</span><span class="meta">81 days left</span></span></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

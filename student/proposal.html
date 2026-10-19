@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research proposal · Student · RPMS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER START -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="dashboard.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Research Project Management System</span>
+      </a>
+      <span class="period-tag">Research period 2026/2027</span>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle__label"><span class="nav-toggle__icon" aria-hidden="true"></span>Menu</label>
+      <div class="nav-panel">
+        <nav class="main-nav" aria-label="Student">
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="project.html">My project</a></li>
+            <li><a href="invite-supervisor.html">Supervisor</a></li>
+            <li><a href="deadlines.html">Deadlines</a></li>
+            <li><a href="proposal.html" aria-current="page">Proposal</a></li>
+            <li><a href="progress-reports.html">Progress reports</a></li>
+            <li><a href="final-report.html">Final report</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-menu__who">
+            <span class="user-menu__name">Nimali Perera</span>
+            <span class="user-menu__role">Student</span>
+          </div>
+          <div class="user-menu__links">
+            <a href="../shared/change-password.html">Change password</a>
+            <a class="user-menu__logout" href="../login.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <main id="main" class="page">
+    <div class="mock-state mock-state--first" role="note">
+      <span class="mock-state__tag">Mock-up state</span>
+      REVISION_REQUESTED: the page as it looked on Mon 14 Dec 2026, after v2 got a revision request. Other states follow below.
+    </div>
+
+    <div class="page-head">
+      <div class="page-head__text">
+        <p class="eyebrow">Submission</p>
+        <h1>Research proposal <span class="badge badge--warn">Revision requested</span></h1>
+        <p class="lede">Each submission is stored as a new numbered version. Earlier versions and their feedback are never overwritten.</p>
+      </div>
+    </div>
+
+    <div class="deadline-banner" role="note">
+      <span class="deadline-banner__label">Applicable deadline</span>
+      <span>Proposal revision</span>
+      <span class="deadline-banner__date"><time datetime="2026-12-18T23:59">Fri 18 Dec 2026, 11:59 pm</time></span>
+      <span class="badge badge--hard">Hard</span>
+      <span class="deadline-banner__remaining">4 days left</span>
+    </div>
+
+    <div class="layout-detail">
+      <section class="card" aria-labelledby="form-heading">
+        <div class="card__head">
+          <h2 id="form-heading">Prepare version 3</h2>
+          <span class="meta">Your supervisor can't see drafts</span>
+        </div>
+
+        <form class="form-grid" method="post" action="#" enctype="multipart/form-data">
+          <input type="hidden" name="csrf_token" value="">
+          <input type="hidden" name="submission_id" value="231">
+
+          <div class="field">
+            <label for="title">Proposal title <span class="req" aria-hidden="true">*</span></label>
+            <input class="input" type="text" id="title" name="title" maxlength="200" required
+                   value="Abstractive Summarisation of Sinhala News Articles Using Transformer Models">
+          </div>
+
+          <div class="field">
+            <label for="summary">Summary / abstract <span class="req" aria-hidden="true">*</span></label>
+            <textarea class="textarea textarea--tall" id="summary" name="summary" maxlength="2000" required aria-describedby="summary-hint">Sinhala is a low-resource language with few summarisation tools. This project fine-tunes the multilingual mT5 model on about 5,000 Sinhala news article–summary pairs collected from three public news websites, with reference summaries taken from the articles' published lead paragraphs and checked by two annotators. The model is compared with an extractive TextRank baseline using ROUGE-1/2/L and a human evaluation of 100 summaries for fluency and faithfulness.</textarea>
+            <p class="hint" id="summary-hint">The problem, your objectives and proposed method. Maximum 2,000 characters.</p>
+          </div>
+
+          <!-- Example of an inline validation error, shown next to its field -->
+          <div class="field field--error">
+            <label for="proposal_file">Proposal document <span class="req" aria-hidden="true">*</span> <span class="muted">(PDF or DOCX, max 10 MB)</span></label>
+            <div class="file-drop">
+              <input type="file" id="proposal_file" name="proposal_file" required
+                     accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                     aria-invalid="true" aria-describedby="file-error">
+            </div>
+            <p class="field__error" id="file-error">Only PDF or DOCX files up to 10 MB are accepted. “proposal_v3.pages” (14.2 MB) can't be uploaded. Save it as PDF and try again.</p>
+          </div>
+
+          <div class="field">
+            <label for="change_notes">Notes for supervisor (what changed in this version)</label>
+            <textarea class="textarea" id="change_notes" name="change_notes" maxlength="1000">Explained how the reference summaries are built (lead paragraphs, checked by two annotators). Increased the dataset from 2,000 to about 5,000 pairs and justified the size in section 4.2. Added the TextRank baseline.</textarea>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn--secondary" type="submit" name="intent" value="draft">Save as draft</button>
+            <button class="btn btn--primary" type="submit" name="intent" value="submit">Submit version 3</button>
+            <p class="form-note"><span class="req" aria-hidden="true">*</span> required · checked before submitting</p>
+          </div>
+        </form>
+      </section>
+
+      <aside class="stack" aria-label="Version history and feedback">
+        <section class="card" aria-labelledby="versions-heading">
+          <h2 id="versions-heading">Version history</h2>
+          <ul class="item-list">
+            <li>
+              <div class="item-row">
+                <span class="item-title">v2 · submitted <time datetime="2026-12-11">11 Dec 2026</time></span>
+                <span class="badge badge--warn">Revision requested</span>
+              </div>
+              <div class="meta">proposal_v2.pdf · 1.2 MB · <a href="#" download>Download</a> · <a href="feedback.html#fb-proposal-v2">View feedback</a></div>
+            </li>
+            <li>
+              <div class="item-row">
+                <span class="item-title">v1 · submitted <time datetime="2026-11-25">25 Nov 2026</time></span>
+                <span class="badge badge--warn">Revision requested</span>
+              </div>
+              <div class="meta">proposal_v1.pdf · 1.0 MB · <a href="#" download>Download</a> · <a href="feedback.html#fb-proposal-v1">View feedback</a></div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="card" aria-labelledby="latest-heading">
+          <div class="card__head">
+            <h2 id="latest-heading">Latest feedback (v2)</h2>
+            <span class="badge badge--warn">Request revision</span>
+          </div>
+          <blockquote class="small">
+            <p>Clarify how you will build the reference summaries, since this decides the quality of the whole evaluation. Also justify the dataset size: 2,000 articles may be too small for fine-tuning. A simple extractive baseline would make the comparison stronger.</p>
+          </blockquote>
+          <p class="meta mt-4">Dr. Ruwan Jayasinghe · <time datetime="2026-12-15">15 Dec 2026</time></p>
+        </section>
+      </aside>
+    </div>
+
+    <!-- ===================== STATE: hard deadline passed ===================== -->
+    <div class="mock-state" role="note">
+      <span class="mock-state__tag">Mock-up state</span>
+      Hard deadline passed and no extension: submitting is blocked, but saving a draft still works.
+    </div>
+
+    <section class="card" aria-labelledby="blocked-heading">
+      <h2 id="blocked-heading" class="visually-hidden">Submission closed</h2>
+      <div class="alert alert--danger" role="alert">
+        <div class="alert__body">
+          <span class="alert__title">Submission closed</span>
+          <p>The proposal deadline has passed. Submission is closed unless the coordinator grants an extension.</p>
+        </div>
+      </div>
+      <div class="form-actions mt-4">
+        <button class="btn btn--secondary" type="button">Save as draft</button>
+        <button class="btn btn--primary" type="button" disabled aria-describedby="blocked-reason">Submit version 3</button>
+        <p class="form-note" id="blocked-reason">Deadline was Fri 18 Dec 2026, 11:59 pm (hard).</p>
+      </div>
+    </section>
+
+    <!-- ===================== STATE: no supervisor yet ===================== -->
+    <div class="mock-state" role="note">
+      <span class="mock-state__tag">Mock-up state</span>
+      DRAFT or AWAITING_SUPERVISOR: there is no supervisor yet.
+    </div>
+
+    <div class="alert alert--neutral" role="note">
+      <div class="alert__body">
+        <span class="alert__title">You can't submit yet</span>
+        <p>A supervisor must be assigned before the proposal can be submitted. You can still save a draft.</p>
+      </div>
+      <div class="alert__actions">
+        <a class="btn btn--secondary btn--sm" href="invite-supervisor.html">Invite a supervisor</a>
+      </div>
+    </div>
+
+    <!-- ===================== STATE: approved (Nimali's current state) ===================== -->
+    <div class="mock-state" role="note">
+      <span class="mock-state__tag">Mock-up state</span>
+      APPROVED: read-only. This is Nimali's current state.
+    </div>
+
+    <div class="layout-detail">
+      <section class="card" aria-labelledby="approved-heading">
+        <div class="card__head">
+          <h2 id="approved-heading">Research proposal</h2>
+          <span class="badge badge--success">Approved</span>
+        </div>
+        <div class="alert alert--success" role="status">
+          <div class="alert__body">
+            <p>Version 3 was approved by Dr. Ruwan Jayasinghe on <time datetime="2026-12-22">22 Dec 2026</time>. Approved proposals are read-only.</p>
+          </div>
+        </div>
+        <dl class="dl-grid mt-4">
+          <dt>Title</dt><dd>Abstractive Summarisation of Sinhala News Articles Using Transformer Models</dd>
+          <dt>Approved version</dt><dd>v3 · proposal_v3.pdf · 1.3 MB · <a href="#" download>Download</a></dd>
+        </dl>
+      </section>
+      <aside class="card" aria-labelledby="approved-versions-heading">
+        <h2 id="approved-versions-heading">Version history</h2>
+        <ul class="item-list">
+          <li><div class="item-row"><span class="item-title">v3 · 17 Dec 2026</span><span class="badge badge--success">Approved</span></div></li>
+          <li><div class="item-row"><span class="item-title">v2 · 11 Dec 2026</span><span class="badge badge--warn">Revision requested</span></div></li>
+          <li><div class="item-row"><span class="item-title">v1 · 25 Nov 2026</span><span class="badge badge--warn">Revision requested</span></div></li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invitations · Supervisor · RPMS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER START -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="dashboard.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Research Project Management System</span>
+      </a>
+      <span class="period-tag">Research period 2026/2027</span>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle__label"><span class="nav-toggle__icon" aria-hidden="true"></span>Menu</label>
+      <div class="nav-panel">
+        <nav class="main-nav" aria-label="Supervisor">
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="invitations.html" aria-current="page">Invitations <span class="nav-count">1<span class="visually-hidden"> pending</span></span></a></li>
+            <li><a href="students.html">My students</a></li>
+            <li><a href="review-queue.html">Review queue <span class="nav-count">4<span class="visually-hidden"> to review</span></span></a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-menu__who">
+            <span class="user-menu__name">Dr. Ruwan Jayasinghe</span>
+            <span class="user-menu__role">Supervisor</span>
+          </div>
+          <div class="user-menu__links">
+            <a href="../shared/change-password.html">Change password</a>
+            <a class="user-menu__logout" href="../login.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <main id="main" class="page">
+    <div class="page-head">
+      <div class="page-head__text">
+        <p class="eyebrow">Supervision requests</p>
+        <h1>Invitations</h1>
+        <p class="lede">Students invite you after agreeing a topic with you. If you accept, you become the project's supervisor straight away and the topic details lock. If you reject, the project goes back to the student as a draft.</p>
+      </div>
+    </div>
+
+    <section aria-labelledby="pending-heading">
+      <h2 id="pending-heading">Pending <span class="badge badge--neutral">1</span></h2>
+
+      <article class="card" aria-labelledby="inv-1-title">
+        <div class="card__head">
+          <div>
+            <p class="eyebrow mb-0">From Dilan Rathnayake · 2022/CS/029</p>
+            <h3 id="inv-1-title" class="project-title">Explainable Fake Review Detection for Sri Lankan E-commerce Platforms</h3>
+          </div>
+          <span class="cluster">
+            <span class="badge badge--neutral">Pending</span>
+            <span class="badge badge--warn">10 days</span>
+          </span>
+        </div>
+
+        <dl class="dl-grid">
+          <dt>Research area</dt>
+          <dd>Natural Language Processing</dd>
+          <dt>Sent</dt>
+          <dd><time datetime="2027-02-26T09:12">Fri 26 Feb 2027, 9:12 am</time></dd>
+          <dt>Description</dt>
+          <dd>Builds a classifier that flags likely fake product reviews in English and Sinhala on local e-commerce sites and explains each decision using highlighted phrases (LIME/SHAP). It is evaluated on a labelled set of 3,000 reviews and with a short user study of how much shoppers trust the explanations.</dd>
+          <dt>Student's message</dt>
+          <dd><blockquote class="small">Dear Dr. Jayasinghe, as we discussed on 24 February, my topic has moved from IoT to NLP. Prof. Gunasekara and the coordinator agreed to the change of supervisor. I would be grateful if you could supervise this project.</blockquote></dd>
+          <dt>Note</dt>
+          <dd class="small muted">This student's previous project was deleted on 12 Feb 2027 after an agreed supervisor change.</dd>
+        </dl>
+
+        <form class="form-grid mt-5" method="post" action="#">
+          <input type="hidden" name="csrf_token" value="">
+          <input type="hidden" name="invitation_id" value="57">
+          <div class="field">
+            <label for="response_comment_57">Comment to the student (optional)</label>
+            <textarea class="textarea" id="response_comment_57" name="response_comment" maxlength="1000" placeholder="If you reject, a short reason helps the student find another supervisor."></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit" name="status" value="ACCEPTED">Accept and become supervisor</button>
+            <button class="btn btn--danger-outline" type="submit" name="status" value="REJECTED">Reject</button>
+            <p class="form-note">Accepting assigns you immediately and can't be undone by you or the student.</p>
+          </div>
+        </form>
+      </article>
+    </section>
+
+    <section class="section-gap" aria-labelledby="past-heading">
+      <h2 id="past-heading" class="mt-5">Past invitations</h2>
+      <div class="table-wrap">
+        <table class="table table--wide">
+          <thead>
+            <tr>
+              <th scope="col">Student</th>
+              <th scope="col">Proposed title</th>
+              <th scope="col">Sent</th>
+              <th scope="col">Status</th>
+              <th scope="col">Your comment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Sachini Herath</th>
+              <td>Predicting Student Dropout Risk in Online Courses Using Interpretable Machine Learning</td>
+              <td class="nowrap"><time datetime="2027-02-24">24 Feb 2027</time></td>
+              <td><span class="badge badge--danger">Rejected</span><span class="cell-sub">3 Mar 2027</span></td>
+              <td>“I'm at capacity this year. Dr. Wickramasinghe works on educational data mining and would be a good fit.”</td>
+            </tr>
+            <tr>
+              <th scope="row">Tharushi Fernando</th>
+              <td>Detecting Code-Mixed Sinhala–English Hate Speech on Social Media</td>
+              <td class="nowrap"><time datetime="2026-11-02">2 Nov 2026</time></td>
+              <td><span class="badge badge--success">Accepted</span><span class="cell-sub">4 Nov 2026</span></td>
+              <td>“Accepted. Please book a meeting to scope the dataset.”</td>
+            </tr>
+            <tr>
+              <th scope="row">Nimali Perera</th>
+              <td>Abstractive Summarisation of Sinhala News Articles Using Transformer Models</td>
+              <td class="nowrap"><time datetime="2026-10-30">30 Oct 2026</time></td>
+              <td><span class="badge badge--success">Accepted</span><span class="cell-sub">2 Nov 2026</span></td>
+              <td>“Happy to supervise this. Let's meet on Thursday to plan the proposal.”</td>
+            </tr>
+            <tr>
+              <th scope="row">Kasun Wijesinghe</th>
+              <td>Lightweight CNNs for Early Detection of Paddy Leaf Diseases on Smartphones</td>
+              <td class="nowrap"><time datetime="2026-10-21">21 Oct 2026</time></td>
+              <td><span class="badge badge--success">Accepted</span><span class="cell-sub">22 Oct 2026</span></td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

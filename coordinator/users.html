@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Users · Coordinator · RPMS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER START -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="dashboard.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Research Project Management System</span>
+      </a>
+      <span class="period-tag">Research period 2026/2027</span>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle__label"><span class="nav-toggle__icon" aria-hidden="true"></span>Menu</label>
+      <div class="nav-panel">
+        <nav class="main-nav" aria-label="Coordinator">
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="users.html" aria-current="page">Users</a></li>
+            <li><a href="research-period.html">Research period</a></li>
+            <li><a href="deadlines.html">Deadlines</a></li>
+            <li><a href="guidelines.html">Guidelines</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="extensions.html">Extensions</a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-menu__who">
+            <span class="user-menu__name">Dr. Malini Senanayake</span>
+            <span class="user-menu__role">Academic Coordinator</span>
+          </div>
+          <div class="user-menu__links">
+            <a href="../shared/change-password.html">Change password</a>
+            <a class="user-menu__logout" href="../login.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <main id="main" class="page">
+    <div class="page-head">
+      <div class="page-head__text">
+        <p class="eyebrow">Accounts</p>
+        <h1>Users</h1>
+        <p class="lede">You create every account; there is no self-registration. Each account has exactly one role. Only eligible fourth-year students can create a project.</p>
+      </div>
+      <div class="page-head__actions">
+        <a class="btn btn--primary" href="#user-form">Add user</a>
+      </div>
+    </div>
+
+    <!-- Role filter as CSS-only tabs (:target). Each tab is also a plain link a PHP version can turn into ?role=… -->
+    <div class="tabs">
+      <ul class="tabs__list" aria-label="Filter by role">
+        <li><a class="tab--default" href="#users-all">All (10)</a></li>
+        <li><a href="#users-students">Students (6)</a></li>
+        <li><a href="#users-supervisors">Supervisors (3)</a></li>
+        <li><a href="#users-coordinators">Coordinators (1)</a></li>
+      </ul>
+
+      <section class="tab-panel tab-panel--default" id="users-all" aria-labelledby="all-heading">
+        <h2 id="all-heading" class="visually-hidden">All users</h2>
+        <div class="table-wrap">
+          <table class="table table--wide">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Role</th>
+                <th scope="col">Index / staff no.</th>
+                <th scope="col">Department</th>
+                <th scope="col">Status</th>
+                <th scope="col">Eligibility</th>
+                <th scope="col"><span class="visually-hidden">Actions</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Nimali Perera</th><td>nimali.perera@uni.example</td><td>Student</td><td class="mono">2022/CS/041</td><td>Computer Science</td><td><span class="badge badge--success">Active</span></td><td><span class="badge badge--success">Eligible</span></td><td><a class="btn btn--ghost btn--sm" href="#user-form">Edit</a></td></tr>
+              <tr><th scope="row">Kasun Wijesinghe</th><td>kasun.wijesinghe@uni.example</td><td>Student</td><td class="mono">2022/CS/017</td><td>Computer Science</td><td><span class="badge badge--success">Active</span></td><td><span class="badge badge--success">Eligible</span></td><td><a class="btn btn--ghost btn--sm" href="#user-form">Edit</a></td></tr>
+              <tr><th scope="row">Tharushi Fernando</th><td>tharushi.fernando@uni.example</td><td>Student</td><td class="mono">2022/CS/063</td><td>Computer Science</td><td><span class="badge badge--success">Active</span></td><td><span class="badge badge--success">Eligible</span></td><td><a class="btn btn--ghost btn--sm" href="#user-form">Edit</a></td></tr>
+              <tr><th scope="row">Dilan Rathnayake</th><td>dilan.rathnayake@uni.example</td><td>Student</td><td class="mono">2022/CS/029</td><td>Computer Science</td><td><span class="badge badge--success">Active</span></td><td><span class="badge badge--success">Eligible</span></td><td><a class="btn btn--ghost btn--sm" href="#user-form">Edit</a></td></tr>
+              <tr><th scope="row">Sachini Herath</th><td>sachini.herath@uni.example</td><td>Student</td><td class="mono">2022/CS/052</td><td>Computer Science</td><td><span class="badge badge--success">Active</span></td><td><span class="badge badge--success">Eligible</span></td><td><a class="btn btn--ghost btn--sm" href="#user-form">Edit</a></td></tr>
+              <tr><th scope="row">Ishara Silva<span class="cell-sub">Deferred to 2027/2028</span></th><td>ishara.silva@uni.example</td><td>Student</td><td class="mono">2021/CS/088</td><td>Computer Science</td><td><span class="badge badge--neutral">Inactive</span></td><td><span class="badge badge--neutral">Not eligible</span></td><td><a class="btn btn--ghost btn--sm" href="#user-form">Edit</a></td></tr>
+              <tr><th scope="row">Dr. Ruwan Jayasinghe</th><td>ruwan.jayasinghe@uni.example</td><td>Supervisor</td><td class="mono">S-1043</td><td>Computer Science</td><td><span class="badge badge--success">Active</span></td><td class="muted">n/a</td><td><a class="btn btn--ghost btn--sm" href="#user-form">Edit</a></td></tr>
+              <tr><th scope="row">Dr. Shalini Wickramasinghe</th><td>shalini.wickramasinghe@uni.example</td><td>Supervisor</td><td class="mono">S-1187</td><td>Information Systems</td><td><span class="badge badge--success">Active</span></td><td class="muted">n/a</td><td><a class="btn btn--ghost btn--sm" href="#user-form">Edit</a></td></tr>
+              <tr><th scope="row">Prof. Anura Gunasekara</th><td>anura.gunasekara@uni.example</td><td>Supervisor</td><td class="mono">S-0921</td><td>Computer Engineering</td><td><span class="badge badge--success">Active</span></td><td class="muted">n/a</td><td><a class="btn btn--ghost btn--sm" href="#user-form">Edit</a></td></tr>
+              <tr><th scope="row">Dr. Malini Senanayake<span class="cell-sub">You</span></th><td>malini.senanayake@uni.example</td><td>Coordinator</td><td class="mono">S-0876</td><td>Computer Science</td><td><span class="badge badge--success">Active</span></td><td class="muted">n/a</td><td><a class="btn btn--ghost btn--sm" href="#user-form">Edit</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="users-students" aria-labelledby="students-heading">
+        <h2 id="students-heading" class="visually-hidden">Students</h2>
+        <div class="table-wrap">
+          <table class="table table--wide">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Index no.</th>
+                <th scope="col">Status</th>
+                <th scope="col">Eligibility</th>
+                <th scope="col">Project</th>
+                <th scope="col"><span class="visually-hidden">Actions</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Nimali Perera</th><td>nimali.perera@uni.example</td><td class="mono">2022/CS/041</td><td><span class="badge badge--success">Active</span></td><td><span class="badge badge--success">Eligible</span></td><td><span class="badge badge--info">In progress</span></td><td><a class="btn btn--ghost btn--sm" href="#user-form">Edit</a></td></tr>
+              <tr><th scope="row">Kasun Wijesinghe</th><td>kasun.wijesinghe@uni.example</td><td class="mono">2022/CS/017</td><td><span class="badge badge--success">Active</span></td><td><span class="badge badge--success">Eligible</span></td><td><span class="badge badge--info">In progress</span></td><td><a class="btn btn--ghost btn--sm" href="#user-form">Edit</a></td></tr>
+              <tr><th scope="row">Tharushi Fernando</th><td>tharushi.fernando@uni.example</td><td class="mono">2022/CS/063</td><td><span class="badge badge--success">Active</span></td><td><span class="badge badge--success">Eligible</span></td><td><span class="badge badge--info">Proposal submitted</span></td><td><a class="btn btn--ghost btn--sm" href="#user-form">Edit</a></td></tr>
+              <tr><th scope="row">Dilan Rathnayake</th><td>dilan.rathnayake@uni.example</td><td class="mono">2022/CS/029</td><td><span class="badge badge--success">Active</span></td><td><span class="badge badge--success">Eligible</span></td><td><span class="badge badge--neutral">Awaiting supervisor</span></td><td><a class="btn btn--ghost btn--sm" href="#user-form">Edit</a></td></tr>
+              <tr><th scope="row">Sachini Herath</th><td>sachini.herath@uni.example</td><td class="mono">2022/CS/052</td><td><span class="badge badge--success">Active</span></td><td><span class="badge badge--success">Eligible</span></td><td><span class="badge badge--neutral">Draft</span></td><td><a class="btn btn--ghost btn--sm" href="#user-form">Edit</a></td></tr>
+              <tr><th scope="row">Ishara Silva</th><td>ishara.silva@uni.example</td><td class="mono">2021/CS/088</td><td><span class="badge badge--neutral">Inactive</span></td><td><span class="badge badge--neutral">Not eligible</span></td><td class="muted">None</td><td><a class="btn btn--ghost btn--sm" href="#user-form">Edit</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="users-supervisors" aria-labelledby="supervisors-heading">
+        <h2 id="supervisors-heading" class="visually-hidden">Supervisors</h2>
+        <div class="table-wrap">
+          <table class="table table--wide">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Staff no.</th>
+                <th scope="col">Department</th>
+                <th scope="col">Status</th>
+                <th scope="col">Supervising</th>
+                <th scope="col"><span class="visually-hidden">Actions</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Dr. Ruwan Jayasinghe</th><td>ruwan.jayasinghe@uni.example</td><td class="mono">S-1043</td><td>Computer Science</td><td><span class="badge badge--success">Active</span></td><td>3 projects · 1 pending invitation</td><td><a class="btn btn--ghost btn--sm" href="#user-form">Edit</a></td></tr>
+              <tr><th scope="row">Dr. Shalini Wickramasinghe</th><td>shalini.wickramasinghe@uni.example</td><td class="mono">S-1187</td><td>Information Systems</td><td><span class="badge badge--success">Active</span></td><td>0 projects</td><td><a class="btn btn--ghost btn--sm" href="#user-form">Edit</a></td></tr>
+              <tr><th scope="row">Prof. Anura Gunasekara</th><td>anura.gunasekara@uni.example</td><td class="mono">S-0921</td><td>Computer Engineering</td><td><span class="badge badge--success">Active</span></td><td>0 projects</td><td><a class="btn btn--ghost btn--sm" href="#user-form">Edit</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="users-coordinators" aria-labelledby="coordinators-heading">
+        <h2 id="coordinators-heading" class="visually-hidden">Coordinators</h2>
+        <div class="table-wrap">
+          <table class="table table--medium">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Staff no.</th>
+                <th scope="col">Status</th>
+                <th scope="col"><span class="visually-hidden">Actions</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Dr. Malini Senanayake<span class="cell-sub">You</span></th><td>malini.senanayake@uni.example</td><td class="mono">S-0876</td><td><span class="badge badge--success">Active</span></td><td><a class="btn btn--ghost btn--sm" href="#user-form">Edit</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <section class="card section-gap" id="user-form" aria-labelledby="form-heading">
+      <div class="card__head">
+        <h2 id="form-heading">Add a user</h2>
+        <span class="meta">Editing an existing user uses the same form</span>
+      </div>
+      <form class="form-grid form-grid--2" method="post" action="#">
+        <input type="hidden" name="csrf_token" value="">
+        <input type="hidden" name="user_id" value="">
+
+        <div class="field">
+          <label for="full_name">Full name <span class="req" aria-hidden="true">*</span></label>
+          <input class="input" type="text" id="full_name" name="full_name" required maxlength="120" autocomplete="off">
+        </div>
+
+        <div class="field">
+          <label for="email">E-mail <span class="req" aria-hidden="true">*</span></label>
+          <input class="input" type="email" id="email" name="email" required maxlength="150" autocomplete="off" aria-describedby="email-hint">
+          <p class="hint" id="email-hint">Used to log in. Must be unique.</p>
+        </div>
+
+        <div class="field">
+          <label for="role">Role <span class="req" aria-hidden="true">*</span></label>
+          <select class="select" id="role" name="role" required>
+            <option value="">Choose a role</option>
+            <option value="STUDENT">Student</option>
+            <option value="SUPERVISOR">Supervisor</option>
+            <option value="COORDINATOR">Coordinator</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="registration_no">Index or staff number <span class="req" aria-hidden="true">*</span></label>
+          <input class="input" type="text" id="registration_no" name="registration_no" required maxlength="20" placeholder="e.g. 2022/CS/041 or S-1043">
+        </div>
+
+        <div class="field">
+          <label for="department">Department <span class="req" aria-hidden="true">*</span></label>
+          <select class="select" id="department" name="department" required>
+            <option value="">Choose a department</option>
+            <option>Computer Science</option>
+            <option>Information Systems</option>
+            <option>Computer Engineering</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="temporary_password">Temporary password <span class="req" aria-hidden="true">*</span></label>
+          <input class="input" type="password" id="temporary_password" name="temporary_password" required minlength="8" autocomplete="new-password" aria-describedby="pw-hint">
+          <p class="hint" id="pw-hint">At least 8 characters. Give it to the user in person; they should change it after their first login.</p>
+        </div>
+
+        <div class="field span-2">
+          <label class="choice" for="is_eligible">
+            <input type="checkbox" id="is_eligible" name="is_eligible" value="1">
+            <span><strong>Eligible fourth-year student</strong> for the 2026/2027 research period (students only)</span>
+          </label>
+          <label class="choice" for="is_active">
+            <input type="checkbox" id="is_active" name="is_active" value="1" checked>
+            <span><strong>Active</strong>: inactive accounts can't log in</span>
+          </label>
+        </div>
+
+        <div class="form-actions span-2">
+          <button class="btn btn--primary" type="submit">Save user</button>
+          <a class="btn btn--secondary" href="users.html">Cancel</a>
+          <p class="form-note"><span class="req" aria-hidden="true">*</span> required</p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>

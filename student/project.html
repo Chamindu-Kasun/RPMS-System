@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My project · Student · RPMS</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <!-- HEADER START -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="dashboard.html">
+        <span class="brand__mark">RPMS</span>
+        <span class="brand__name">Research Project Management System</span>
+      </a>
+      <span class="period-tag">Research period 2026/2027</span>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle__label"><span class="nav-toggle__icon" aria-hidden="true"></span>Menu</label>
+      <div class="nav-panel">
+        <nav class="main-nav" aria-label="Student">
+          <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="project.html" aria-current="page">My project</a></li>
+            <li><a href="invite-supervisor.html">Supervisor</a></li>
+            <li><a href="deadlines.html">Deadlines</a></li>
+            <li><a href="proposal.html">Proposal</a></li>
+            <li><a href="progress-reports.html">Progress reports</a></li>
+            <li><a href="final-report.html">Final report</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </nav>
+        <div class="user-menu">
+          <div class="user-menu__who">
+            <span class="user-menu__name">Nimali Perera</span>
+            <span class="user-menu__role">Student</span>
+          </div>
+          <div class="user-menu__links">
+            <a href="../shared/change-password.html">Change password</a>
+            <a class="user-menu__logout" href="../login.html">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- HEADER END -->
+
+  <main id="main" class="page">
+    <div class="page-head">
+      <div class="page-head__text">
+        <p class="eyebrow">Project record</p>
+        <h1>My research project</h1>
+        <p class="lede">Your topic details: title, research area and a brief description. You can edit them until a supervisor accepts your invitation.</p>
+      </div>
+    </div>
+
+    <!-- ===================== STATE A: DRAFT (editable) ===================== -->
+    <div class="mock-state mock-state--first" role="note">
+      <span class="mock-state__tag">Mock-up state</span>
+      DRAFT: no supervisor yet, so the details can be edited (also shown after an invitation is rejected).
+    </div>
+
+    <div class="layout-detail">
+      <section class="card" aria-labelledby="edit-heading">
+        <div class="card__head">
+          <h2 id="edit-heading">Project details</h2>
+          <span class="badge badge--neutral">Draft</span>
+        </div>
+
+        <form class="form-grid" method="post" action="#">
+          <input type="hidden" name="csrf_token" value="">
+          <input type="hidden" name="project_id" value="104">
+
+          <div class="field">
+            <label for="title">Working title <span class="req" aria-hidden="true">*</span></label>
+            <input class="input" type="text" id="title" name="title" maxlength="200" required
+                   value="Abstractive Summarisation of Sinhala News Articles Using Transformer Models">
+            <p class="hint">Up to 200 characters. You can refine it later in your proposal.</p>
+          </div>
+
+          <div class="field">
+            <label for="research_area">Research area <span class="req" aria-hidden="true">*</span></label>
+            <input class="input" type="text" id="research_area" name="research_area" maxlength="120" required
+                   value="Natural Language Processing">
+          </div>
+
+          <div class="field">
+            <label for="description">Brief description <span class="req" aria-hidden="true">*</span></label>
+            <textarea class="textarea textarea--tall" id="description" name="description" required aria-describedby="description-hint">This project builds and evaluates an abstractive summariser for Sinhala news articles by fine-tuning a multilingual transformer model on a curated corpus of about 5,000 article–summary pairs collected from public news websites. It compares the model against an extractive baseline using ROUGE scores and a small human evaluation of fluency and faithfulness.</textarea>
+            <p class="hint" id="description-hint">Two or three sentences: the problem, your approach and how you will evaluate it.</p>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit">Save project</button>
+            <a class="btn btn--secondary" href="dashboard.html">Cancel</a>
+            <p class="form-note"><span class="req" aria-hidden="true">*</span> required</p>
+          </div>
+        </form>
+      </section>
+
+      <aside class="stack" aria-label="Next steps">
+        <section class="card card--muted" aria-labelledby="next-heading">
+          <h2 id="next-heading">Next step</h2>
+          <p class="small">Once your details are saved, invite the staff member you have already agreed your topic with.</p>
+          <a class="btn btn--secondary btn--block" href="invite-supervisor.html">Invite a supervisor</a>
+        </section>
+        <section class="card" aria-labelledby="rules-heading">
+          <h2 id="rules-heading">Good to know</h2>
+          <ul class="small mb-0">
+            <li>You need a title, research area and description before you can send an invitation.</li>
+            <li>The details lock when a supervisor accepts.</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <!-- ============ STATE B: SUPERVISOR_ASSIGNED and later (locked) ============ -->
+    <div class="mock-state" role="note">
+      <span class="mock-state__tag">Mock-up state</span>
+      SUPERVISOR_ASSIGNED and later: topic details are locked. This is Nimali's current state.
+    </div>
+
+    <div class="layout-detail">
+      <section class="card" aria-labelledby="locked-heading">
+        <div class="card__head">
+          <h2 id="locked-heading">Project details</h2>
+          <span class="badge badge--info">In progress</span>
+        </div>
+
+        <div class="alert alert--neutral" role="note">
+          <div class="alert__body">
+            <span class="alert__title">Topic details are locked</span>
+            <p>Topic details are locked because a supervisor has been assigned. To change your supervisor, contact the coordinator.</p>
+          </div>
+        </div>
+
+        <form class="form-grid mt-4" method="post" action="#" aria-label="Project details (read-only)">
+          <input type="hidden" name="csrf_token" value="">
+
+          <div class="field">
+            <label for="title_locked">Working title</label>
+            <input class="input" type="text" id="title_locked" name="title" readonly
+                   value="Abstractive Summarisation of Sinhala News Articles Using Transformer Models">
+          </div>
+
+          <div class="field">
+            <label for="research_area_locked">Research area</label>
+            <input class="input" type="text" id="research_area_locked" name="research_area" readonly value="Natural Language Processing">
+          </div>
+
+          <div class="field">
+            <label for="description_locked">Brief description</label>
+            <textarea class="textarea textarea--tall" id="description_locked" name="description" readonly>This project builds and evaluates an abstractive summariser for Sinhala news articles by fine-tuning a multilingual transformer model on a curated corpus of about 5,000 article–summary pairs collected from public news websites. It compares the model against an extractive baseline using ROUGE scores and a small human evaluation of fluency and faithfulness.</textarea>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit" disabled>Save project</button>
+            <p class="form-note">Saving is disabled while the details are locked.</p>
+          </div>
+        </form>
+      </section>
+
+      <aside class="stack" aria-label="Project summary">
+        <section class="card" aria-labelledby="summary-heading">
+          <h2 id="summary-heading">Summary</h2>
+          <dl class="dl-grid small">
+            <dt>Supervisor</dt><dd>Dr. Ruwan Jayasinghe</dd>
+            <dt>Assigned</dt><dd><time datetime="2026-11-02">2 Nov 2026</time></dd>
+            <dt>Created</dt><dd><time datetime="2026-10-26">26 Oct 2026</time></dd>
+            <dt>Proposal</dt><dd><span class="badge badge--success">Approved (v3)</span></dd>
+          </dl>
+        </section>
+        <section class="card card--muted" aria-labelledby="history-heading">
+          <h2 id="history-heading">Status history</h2>
+          <ol class="timeline">
+            <li><time datetime="2026-12-22">22 Dec 2026</time> <span class="badge badge--info">In progress</span> Proposal v3 approved</li>
+            <li><time datetime="2026-12-17">17 Dec 2026</time> <span class="badge badge--info">Proposal submitted</span> v3</li>
+            <li><time datetime="2026-11-25">25 Nov – 15 Dec 2026</time> <span class="badge badge--warn">Revision required</span> twice (v1, v2)</li>
+            <li><time datetime="2026-11-02">2 Nov 2026</time> <span class="badge badge--info">Supervisor assigned</span></li>
+            <li><time datetime="2026-10-30">30 Oct 2026</time> <span class="badge badge--neutral">Awaiting supervisor</span> Invited Dr. Jayasinghe</li>
+            <li><time datetime="2026-10-29">29 Oct 2026</time> <span class="badge badge--neutral">Draft</span> Invitation rejected by Prof. Gunasekara</li>
+            <li><time datetime="2026-10-27">27 Oct 2026</time> <span class="badge badge--neutral">Awaiting supervisor</span> Invited Prof. Gunasekara</li>
+            <li><time datetime="2026-10-26">26 Oct 2026</time> <span class="badge badge--neutral">Draft</span> Project created</li>
+          </ol>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>RPMS · Research Project Management System</p>
+      <p>Research period 2026/2027</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+</body>
+</html>
